@@ -1,0 +1,28 @@
+/* Novera Studio – Schriftsystem
+   Newsreader (Display/Editorial) · Archivo (Sans/Interface) · IBM Plex Mono (Register/Labels)
+   Alle Schriften unter SIL Open Font License 1.1 – Lizenztexte in /assets/fonts/ */
+
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:block;
+  src:url(fonts/newsreader-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:block;
+  src:url(fonts/newsreader-latin-ext-wght-normal.woff2) format('woff2-variations');
+  unicode-range:U+0100-02BA,U+1E00-1E9F,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:200 800;font-display:block;
+  src:url(fonts/newsreader-latin-wght-italic.woff2) format('woff2-variations');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122;}
+
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:block;
+  src:url(fonts/archivo-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:block;
+  src:url(fonts/archivo-latin-ext-wght-normal.woff2) format('woff2-variations');
+  unicode-range:U+0100-02BA,U+1E00-1E9F,U+2020,U+20A0-20AB,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-display:block;
+  src:url(fonts/archivo-latin-wght-italic.woff2) format('woff2-variations');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122;}
+
+@font-face{font-family:'Plex Mono';font-style:normal;font-weight:400;font-display:block;
+  src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');}
+@font-face{font-family:'Plex Mono';font-style:normal;font-weight:500;font-display:block;
+  src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');}

@@ -1,0 +1,8 @@
+node_modules/
+mockup/node_modules/
+mockup/package-lock.json
+mockup/build/_*.html
+mockup/build/sheet-*.png
+mockup/build/art-preview.png
+mockup/build/p*.png
+mockup/build/deck/

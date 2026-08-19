@@ -1,0 +1,118 @@
+/* Novera Studio — Präsentationsdeck
+   Format 1600 × 900 (16:9). Bildgeführt: großes Bild, kurze Zeile. */
+@import url("../assets/fonts.css");
+
+:root{
+  --nv-ink:#0E1013; --nv-ink-2:#1A1D21; --nv-ink-3:#33383E;
+  --nv-paper:#F5F3EF; --nv-paper-2:#E9E6DF;
+  --nv-dim:#8A8F96; --nv-dim-2:#B4B8BD;
+  --nv-line:rgba(14,16,19,.14); --nv-line-2:rgba(14,16,19,.07);
+  --nv-line-d:rgba(245,243,239,.17); --nv-line-d2:rgba(245,243,239,.08);
+  --brass:#A9722A; --brass-hi:#C89551; --tanne:#14332C;
+  --display:'Newsreader',Georgia,serif;
+  --sans:'Archivo',Arial,sans-serif;
+  --mono:'Plex Mono',ui-monospace,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#6E7076}
+body{font-family:var(--sans);color:var(--nv-ink);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+@page{size:1600px 900px;margin:0}
+
+.pg{
+  width:1600px;height:900px;position:relative;overflow:hidden;
+  background:var(--nv-paper);color:var(--nv-ink);
+  display:flex;flex-direction:column;padding:40px 62px 34px;
+  page-break-after:always;break-after:page;
+}
+.pg:last-child{page-break-after:auto;break-after:auto}
+.pg--dark{background:var(--nv-ink);color:var(--nv-paper)}
+.pg--mid{background:var(--nv-paper-2)}
+
+/* Kopf- und Fußzeile der Seiten */
+.pg__top{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  position:relative;z-index:2;flex:none}
+.pg__bot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+  padding-top:20px;position:relative;z-index:2;flex:none}
+.nv{display:flex;align-items:center;gap:11px}
+.nv img{width:17px;height:17px}
+.nv b{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.30em;text-transform:uppercase}
+.mono{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--nv-dim)}
+.pg--dark .mono{color:var(--nv-dim-2)}
+.pg__no{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--nv-dim)}
+.pg--dark .pg__no{color:var(--nv-dim-2)}
+
+.pg__body{flex:1;min-height:0;position:relative;z-index:2;display:flex;flex-direction:column}
+
+/* Typografie */
+.kicker{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brass)}
+.h-xl{font-family:var(--display);font-weight:300;font-size:104px;line-height:.94;letter-spacing:-.028em}
+.h-l{font-family:var(--display);font-weight:300;font-size:62px;line-height:1;letter-spacing:-.022em}
+.h-m{font-family:var(--display);font-weight:300;font-size:42px;line-height:1.04;letter-spacing:-.018em}
+.h-s{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.16;letter-spacing:-.012em}
+.lead{font-size:19px;line-height:1.55;color:var(--nv-ink-3);max-width:62ch}
+.pg--dark .lead{color:var(--nv-dim-2)}
+.note{font-size:15px;line-height:1.6;color:var(--nv-dim)}
+
+.rule{height:1px;background:var(--nv-line);border:0;width:100%}
+.pg--dark .rule{background:var(--nv-line-d)}
+
+/* Gravur-Ebene */
+.art{position:absolute;pointer-events:none;z-index:1}
+
+/* Browser-Rahmen — zeigt, dass es eine echte Seite ist */
+.bw{background:#DDD9D1;border:1px solid var(--nv-line);border-radius:7px 7px 0 0;
+  overflow:hidden;box-shadow:0 40px 80px -50px rgba(14,16,19,.7)}
+.pg--dark .bw{background:#25282C;border-color:rgba(245,243,239,.14)}
+.bw__bar{height:34px;display:flex;align-items:center;gap:8px;padding:0 14px}
+.bw__dot{width:9px;height:9px;border-radius:50%;background:rgba(14,16,19,.20)}
+.pg--dark .bw__dot{background:rgba(245,243,239,.22)}
+.bw__url{margin-left:12px;flex:1;max-width:330px;height:19px;border-radius:10px;
+  background:rgba(255,255,255,.6);display:flex;align-items:center;padding:0 11px;
+  font-family:var(--mono);font-size:8.6px;letter-spacing:.09em;color:#5D6167}
+.pg--dark .bw__url{background:rgba(245,243,239,.10);color:var(--nv-dim-2)}
+.bw__vp{overflow:hidden;background:#F2EDE4;position:relative}
+.bw__vp img{width:100%;display:block}
+.bw__vp.crop img{position:absolute;top:0;left:0}
+
+/* Seitenfahne — die ganze Seite auf einen Blick */
+.flag{display:flex;gap:26px;align-items:flex-start}
+.flag__c{width:330px;height:626px;background-repeat:no-repeat;background-size:330px 1891px;
+  border:1px solid var(--nv-line);box-shadow:0 26px 54px -40px rgba(14,16,19,.6)}
+.flag__l{width:330px;margin-top:12px}
+
+/* Telefonrahmen */
+.ph{width:288px;flex:none}
+.ph__d{background:#16181B;border-radius:36px;padding:9px;
+  box-shadow:0 40px 80px -46px rgba(14,16,19,.85)}
+.ph__s{border-radius:28px;overflow:hidden;position:relative;background:#F2EDE4;line-height:0}
+.ph__s img{width:100%;display:block}
+.ph__i{position:absolute;top:11px;left:50%;transform:translateX(-50%);
+  width:82px;height:21px;border-radius:12px;background:#16181B;z-index:2}
+.ph__c{margin-top:16px}
+
+/* Raster für Markenteile */
+.tiles{display:flex;gap:26px;align-items:flex-start;flex:1;min-height:0}
+.tile{background:#fff;box-shadow:0 30px 60px -46px rgba(14,16,19,.65)}
+.tile img{width:100%}
+.cap{margin-top:11px;font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--nv-dim)}
+
+/* Leistungsliste */
+.deliv{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--nv-line-d)}
+.deliv__c{padding:26px 30px 8px;border-right:1px solid var(--nv-line-d)}
+.deliv__c:last-child{border-right:0}
+.deliv__c:first-child{padding-left:0}
+.deliv h3{font-family:var(--display);font-weight:400;font-size:23px;margin-bottom:16px}
+.deliv li{padding:9px 0;border-bottom:1px solid var(--nv-line-d2);font-size:15px;
+  color:var(--nv-dim-2);display:flex;gap:12px}
+.deliv li::before{content:"—";color:var(--brass-hi);flex:none}
+.deliv li:last-child{border-bottom:0}
+
+.price{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
+  border-top:1px solid var(--nv-line-d);padding-top:26px;margin-top:30px}
