@@ -1,17 +1,21 @@
 /* Novera Studio — Präsentationsdeck
    Format 1600 × 900 (16:9). Bildgeführt: großes Bild, kurze Zeile. */
 @import url("../assets/fonts.css");
+@import url("../assets/novera/novera-fonts.css");
 
 :root{
-  --nv-ink:#0E1013; --nv-ink-2:#1A1D21; --nv-ink-3:#33383E;
-  --nv-paper:#F5F3EF; --nv-paper-2:#E9E6DF;
-  --nv-dim:#8A8F96; --nv-dim-2:#B4B8BD;
-  --nv-line:rgba(14,16,19,.14); --nv-line-2:rgba(14,16,19,.07);
-  --nv-line-d:rgba(245,243,239,.17); --nv-line-d2:rgba(245,243,239,.08);
+  /* Novera Studio: Tiefschwarz, Chrom, Weiss. Kein Gold —
+     das Messing gehoert der vorgestellten Marke, nicht dem Studio. */
+  --nv-ink:#08090B; --nv-ink-2:#0C0E12; --nv-ink-3:#3C444E;
+  --nv-paper:#F4F5F7; --nv-paper-2:#E7E9ED;
+  --nv-dim:#7C848F; --nv-dim-2:#939CA8;
+  --nv-chrome:#C3CAD4;
+  --nv-line:rgba(8,9,11,.13); --nv-line-2:rgba(8,9,11,.06);
+  --nv-line-d:rgba(255,255,255,.16); --nv-line-d2:rgba(255,255,255,.08);
   --brass:#A9722A; --brass-hi:#C89551; --tanne:#14332C;
-  --display:'Newsreader',Georgia,serif;
-  --sans:'Archivo',Arial,sans-serif;
-  --mono:'Plex Mono',ui-monospace,monospace;
+  --display:'Instrument Serif','Iowan Old Style',Georgia,serif;
+  --sans:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'Inter',-apple-system,Helvetica,Arial,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#6E7076}
@@ -37,24 +41,27 @@ ul{margin:0;padding:0;list-style:none}
   position:relative;z-index:2;flex:none}
 .pg__bot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
   padding-top:20px;position:relative;z-index:2;flex:none}
-.nv{display:flex;align-items:center;gap:11px}
-.nv img{width:17px;height:17px}
-.nv b{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.30em;text-transform:uppercase}
-.mono{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.19em;
+.nv{display:flex;align-items:center}
+.nv img{height:21px;width:auto}
+.nv--big img{height:34px}
+.mono{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.20em;
   text-transform:uppercase;color:var(--nv-dim)}
 .pg--dark .mono{color:var(--nv-dim-2)}
-.pg__no{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--nv-dim)}
+.pg__no{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;color:var(--nv-dim);font-variant-numeric:tabular-nums}
 .pg--dark .pg__no{color:var(--nv-dim-2)}
 
 .pg__body{flex:1;min-height:0;position:relative;z-index:2;display:flex;flex-direction:column}
 
 /* Typografie */
-.kicker{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.22em;
+.kicker{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.22em;
   text-transform:uppercase;color:var(--brass)}
-.h-xl{font-family:var(--display);font-weight:300;font-size:104px;line-height:.94;letter-spacing:-.028em}
-.h-l{font-family:var(--display);font-weight:300;font-size:62px;line-height:1;letter-spacing:-.022em}
-.h-m{font-family:var(--display);font-weight:300;font-size:42px;line-height:1.04;letter-spacing:-.018em}
-.h-s{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.16;letter-spacing:-.012em}
+/* Auf den Seiten, die Novera Studio selbst spricht, gilt Chrom statt Messing —
+   das Messing gehoert der vorgestellten Marke. */
+.kicker--chrome{color:var(--nv-chrome)}
+.h-xl{font-family:var(--display);font-weight:400;font-size:106px;line-height:.98;letter-spacing:-.018em}
+.h-l{font-family:var(--display);font-weight:400;font-size:64px;line-height:1.04;letter-spacing:-.014em}
+.h-m{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.08;letter-spacing:-.011em}
+.h-s{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.24;letter-spacing:-.008em}
 .lead{font-size:19px;line-height:1.55;color:var(--nv-ink-3);max-width:62ch}
 .pg--dark .lead{color:var(--nv-dim-2)}
 .note{font-size:15px;line-height:1.6;color:var(--nv-dim)}
@@ -74,7 +81,7 @@ ul{margin:0;padding:0;list-style:none}
 .pg--dark .bw__dot{background:rgba(245,243,239,.22)}
 .bw__url{margin-left:12px;flex:1;max-width:330px;height:19px;border-radius:10px;
   background:rgba(255,255,255,.6);display:flex;align-items:center;padding:0 11px;
-  font-family:var(--mono);font-size:8.6px;letter-spacing:.09em;color:#5D6167}
+  font-family:'Plex Mono',monospace;font-size:8.4px;letter-spacing:.03em;color:#5D6167}
 .pg--dark .bw__url{background:rgba(245,243,239,.10);color:var(--nv-dim-2)}
 .bw__vp{overflow:hidden;background:#F2EDE4;position:relative}
 .bw__vp img{width:100%;display:block}
@@ -100,7 +107,7 @@ ul{margin:0;padding:0;list-style:none}
 .tiles{display:flex;gap:26px;align-items:flex-start;flex:1;min-height:0}
 .tile{background:#fff;box-shadow:0 30px 60px -46px rgba(14,16,19,.65)}
 .tile img{width:100%}
-.cap{margin-top:11px;font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;
+.cap{margin-top:11px;font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.17em;
   text-transform:uppercase;color:var(--nv-dim)}
 
 /* Leistungsliste */
@@ -108,7 +115,7 @@ ul{margin:0;padding:0;list-style:none}
 .deliv__c{padding:26px 30px 8px;border-right:1px solid var(--nv-line-d)}
 .deliv__c:last-child{border-right:0}
 .deliv__c:first-child{padding-left:0}
-.deliv h3{font-family:var(--display);font-weight:400;font-size:23px;margin-bottom:16px}
+.deliv h3{font-family:var(--display);font-weight:400;font-size:25px;margin-bottom:16px}
 .deliv li{padding:9px 0;border-bottom:1px solid var(--nv-line-d2);font-size:15px;
   color:var(--nv-dim-2);display:flex;gap:12px}
 .deliv li::before{content:"—";color:var(--brass-hi);flex:none}

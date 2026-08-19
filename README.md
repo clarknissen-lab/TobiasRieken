@@ -26,6 +26,12 @@ einziger Signalton. Kein Blau, keine Verläufe, keine Glaseffekte, kein Kachelra
 | **Tinte** | `#14171A` |
 | **Schrift** | Newsreader (Auszeichnung) · Archivo (Lesetext) · IBM Plex Mono (Register) — alle SIL OFL |
 
+Das **Präsentationsdeck** ist dagegen in der Hausmarke von Novera Studio gesetzt:
+Tiefschwarz `#08090B`, Chromverlauf, Instrument Serif und Inter, Wortmarke und
+Emblem aus `clarknissen-lab/noverastudio`. Der Rahmen gehört dem Studio, die
+warme Papierwelt der vorgestellten Marke — Messing erscheint deshalb nur auf den
+Kundenseiten, nie auf Titel und Leitidee.
+
 ### Was bewusst anders gelöst ist
 
 | Standardmuster | Hier stattdessen |
@@ -53,7 +59,7 @@ mockup/
   presentation/deck.html     Quelle des PDF
   assets/logo/               Signet in fünf Fassungen (SVG)
   assets/art/                Guilloche-Gravuren (SVG, generiert)
-  assets/novera/             Signet Novera Studio
+  assets/novera/             Marke Novera Studio (Wortmarke, Emblem, Favicon, Schriften)
   assets/fonts/              Schriften (SIL OFL, Lizenztexte liegen bei)
   tools/                     Generatoren und Bildstrecke
   build/shots/               Alle Bildschirmabzüge
