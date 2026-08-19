@@ -20,7 +20,7 @@ hier liest, soll sich gut aufgehoben fühlen — nicht wie in einer Bankfiliale.
 | **Creme** | `#FDFBF7` · `#F8F2E8` |
 | **Gold** | `#C4A05C` |
 | **Tinte** | `#14202E` |
-| **Schrift** | Fraunces (Auszeichnung) · Inter (Lesetext und Beschriftung) — beide SIL OFL |
+| **Schrift** | Cormorant Garamond (Auszeichnung) · Inter (Lesetext und Beschriftung) — beide SIL OFL |
 
 Die Abschnitte wechseln bewusst zwischen warm, hell-kühl und dunkel. Der Blick
 bekommt Pausen, beim Scrollen wird es nicht langweilig, und die Übergänge
@@ -31,9 +31,11 @@ sitzt die Eleganz. Der große Schwerpunkt-Abschnitt „Für Beamte“ ist bewuss
 heller (`#123156` mit Lichtverlauf), damit drei dunkle Blöcke die Seite nicht
 erdrücken. Das gibt zusätzlich Tiefenstaffelung, ohne eine neue Farbe zu brauchen.
 
-**Fraunces statt einer klassischen Didone:** weiche Ecken (`SOFT 45`), gerade
-Formen (`WONK 0`). Seriös genug für Finanzen, freundlich genug, dass sich
-niemand eingeschüchtert fühlt.
+**Cormorant Garamond** als Auszeichnung: eine hochkontrastige
+Renaissance-Antiqua — schlank, ruhig, edel. Sie wird ausschließlich groß
+gesetzt; im Kleinen übernimmt Inter. Weil ihre x-Höhe klein ist, liegen alle
+Auszeichnungsgrade rund ein Sechstel über dem üblichen Wert, und Zahlen laufen
+in Versalziffern, damit Kennzahlen als Daten lesbar bleiben.
 
 ## Logo — Monogramm TR
 
@@ -128,6 +130,26 @@ Das **Präsentationsdeck** ist in der Hausmarke von Novera Studio gesetzt:
 Tiefschwarz `#08090B`, Chromverlauf, Instrument Serif und Inter, Wortmarke und
 Emblem aus `clarknissen-lab/noverastudio`. Der Rahmen gehört dem Studio, die
 blau-warme Welt der vorgestellten Marke.
+
+## Geprüft, nicht geschätzt
+
+Zwei Prüfläufe gehören zum Build und laufen über Webseite, Redaktionsbereich
+und alle 24 Präsentationsseiten:
+
+```bash
+node tools/audit.mjs       # Überlauf, abgeschnittene Inhalte, kaputte Bilder,
+                           # Kontrast nach WCAG AA — bei 1600, 1280, 820, 390, 320 px
+node tools/audit-css.mjs   # überschriebene Klassenregeln
+```
+
+Der zweite Lauf sucht eine Fehlerklasse, die man mit dem Auge kaum findet: Eine
+Regel wie `.score p { font-size: 13.5px }` schlägt `.score__v { font-size: 70px }`,
+weil der Element-Selektor die Spezifität erhöht — die große Zahl rendert dann
+klein, ohne dass irgendwo etwas überläuft. Vier solcher Fälle steckten im
+Entwurf (Symbolfeld im Terminblock, Statusmarken im Redaktionsbereich, die
+grünen Ersparnis-Marken, Bewertungszahl und Avatar). Alle sind behoben.
+
+Beide Läufe melden aktuell **null Befunde**.
 
 ## Selbst bauen
 

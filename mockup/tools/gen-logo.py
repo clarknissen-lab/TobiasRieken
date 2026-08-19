@@ -9,14 +9,14 @@ import base64, os
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "logo")
 os.makedirs(OUT, exist_ok=True)
 
-FONT = "Fraunces, Georgia, serif"
+FONT = "Cormorant, Garamond, Georgia, serif"
 
 # Die Schrift wird in jede Datei eingebettet. Ohne das greift ein SVG,
 # das ueber <img> geladen wird, auf eine Systemschrift zurueck.
 _woff = os.path.join(os.path.dirname(__file__), "..", "assets", "fonts",
-                     "fraunces-latin-full-normal.woff2")
+                     "cormorant-garamond-latin-wght-normal.woff2")
 _b64 = base64.b64encode(open(_woff, "rb").read()).decode()
-FONTDEF = ("<defs><style>@font-face{font-family:'Fraunces';font-weight:300 900;"
+FONTDEF = ("<defs><style>@font-face{font-family:'Cormorant';font-weight:300 700;"
            "src:url(data:font/woff2;base64," + _b64 + ") format('woff2-variations');}"
            "</style></defs>")
 
