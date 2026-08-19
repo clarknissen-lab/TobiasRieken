@@ -14,6 +14,7 @@ async function prep(page) {
   await page.addStyleTag({ content: `
     .rise{opacity:1 !important;transform:none !important;transition:none !important}
     html{scroll-behavior:auto}
+    .split__p{transition:none !important}
   `});
   await page.waitForTimeout(500);
 }
@@ -26,20 +27,21 @@ await d.screenshot({ path: `${OUT}/desktop-fold.png` });
 
 const cuts = {
   'd-hero':        '.hero',
-  'd-ausgangslage':'#ausgangslage',
+  'd-trust':       '.trust',
+  'd-ueberblick':  '#ueberblick',
   'd-leistungen':  '#leistungen',
   'd-beamte':      '#beamte',
   'd-ablauf':      '#ablauf',
   'd-person':      '#person',
   'd-stimme':      '.voice',
   'd-termin':      '#termin',
-  'd-foot':        '.foot',
-  'd-entry':       '#leistungen .entry:nth-of-type(2)',
-  'd-head':        '.masthead',
+  'd-foot':        'footer.foot',
+  'd-card':        '#leistungen .card:nth-of-type(1)',
+  'd-head':        '.nav',
 };
 // Für Sektions-Ausschnitte die klebende Kopfzeile ausblenden,
 // sonst legt sie sich in den Abzug.
-const hideHead = await d.addStyleTag({ content: '.masthead{display:none !important}' });
+const hideHead = await d.addStyleTag({ content: '.nav{display:none !important}' });
 for (const [name, sel] of Object.entries(cuts)) {
   if (name === 'd-head') continue;
   const el = await d.$(sel);
@@ -47,7 +49,7 @@ for (const [name, sel] of Object.entries(cuts)) {
 }
 await hideHead.evaluate((n) => n.remove());
 await d.waitForTimeout(200);
-{ const el = await d.$('.masthead'); if (el) await el.screenshot({ path: `${OUT}/d-head.png` }); }
+{ const el = await d.$('.nav'); if (el) await el.screenshot({ path: `${OUT}/d-head.png` }); }
 { const el = await d.$('.hero'); if (el) await el.screenshot({ path: `${OUT}/d-hero.png` }); }
 const full = await d.evaluate(() => document.body.scrollHeight);
 console.log('desktop full height', full);
@@ -62,12 +64,12 @@ await m.screenshot({ path: `${OUT}/mobile-full.png`, fullPage: true });
 
 const mviews = [
   ['m-hero', 0, 0],
-  ['m-leistungen', '#leistungen', 60],
-  ['m-beamte', '#beamte', 60],
-  ['m-ablauf', '#ablauf', 60],
-  ['m-person', '#person', -430],
-  ['m-stimme', '#stimme', 40],
-  ['m-termin', '#termin', 60],
+  ['m-ueberblick', '#ueberblick', 50],
+  ['m-leistungen', '#leistungen', 50],
+  ['m-beamte', '#beamte', 50],
+  ['m-ablauf', '#ablauf', 50],
+  ['m-person', '#person', -250],
+  ['m-termin', '#termin', 50],
 ];
 for (const [name, target, off] of mviews) {
   if (target === 0) {

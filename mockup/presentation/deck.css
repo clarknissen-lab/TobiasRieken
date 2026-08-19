@@ -89,7 +89,7 @@ ul{margin:0;padding:0;list-style:none}
 
 /* Seitenfahne — die ganze Seite auf einen Blick */
 .flag{display:flex;gap:26px;align-items:flex-start}
-.flag__c{width:330px;height:626px;background-repeat:no-repeat;background-size:330px 1891px;
+.flag__c{width:330px;height:565px;background-repeat:no-repeat;background-size:330px 1695px;
   border:1px solid var(--nv-line);box-shadow:0 26px 54px -40px rgba(14,16,19,.6)}
 .flag__l{width:330px;margin-top:12px}
 
@@ -123,3 +123,52 @@ ul{margin:0;padding:0;list-style:none}
 
 .price{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
   border-top:1px solid var(--nv-line-d);padding-top:26px;margin-top:30px}
+
+
+/* --- Ergänzungen für die neue Fassung ------------------------------------ */
+
+/* Bewegungs-Legende */
+.motion{flex:1;display:grid;gap:9px;align-content:start;padding-top:2px}
+.motion--2{grid-template-columns:1fr 1fr;gap:9px 20px}
+.motion li{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.45;
+  color:var(--nv-ink-3)}
+.pg--dark .motion li{color:var(--nv-dim-2)}
+.motion b{width:24px;height:24px;flex:none;border-radius:50%;
+  background:linear-gradient(135deg,#E6CD97,#C09A4E);color:#1B1408;
+  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+
+.always{margin-top:22px;padding:16px 22px;border-radius:10px;background:rgba(8,9,11,.05);
+  border:1px solid var(--nv-line);display:flex;gap:22px;align-items:baseline}
+.always .kicker{flex:none}
+.always p{font-size:13.5px;line-height:1.55;color:var(--nv-ink-3)}
+
+/* Logo-Entwürfe zur Wahl */
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;flex:1;align-content:start}
+.opt{position:relative;background:#fff;border:1px solid var(--nv-line);border-radius:16px;
+  padding:26px 26px 22px;box-shadow:0 24px 50px -40px rgba(8,9,11,.55)}
+.opt.is-pick{border-color:#C09A4E;box-shadow:0 0 0 2px rgba(192,154,78,.22),0 24px 50px -40px rgba(8,9,11,.6)}
+.opt__badge{position:absolute;top:-11px;left:26px;background:linear-gradient(135deg,#E6CD97,#C09A4E);
+  color:#1B1408;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  padding:5px 12px;border-radius:99px}
+.opt__art{height:210px;border-radius:12px;background:#F8F2E8;display:grid;place-items:center;
+  margin-bottom:20px}
+.opt__art img{width:132px;height:132px}
+.opt h3{margin-bottom:8px}
+.opt__sizes{display:flex;gap:16px;align-items:flex-end;margin-top:18px;padding-top:16px;
+  border-top:1px solid var(--nv-line)}
+.opt__sizes img{width:38px;height:38px}
+.opt__sizes img.s{width:18px;height:18px}
+
+/* Browser-Reiter als Größennachweis */
+.tab{display:inline-flex;align-items:center;gap:10px;background:#E4E6EA;border:1px solid var(--nv-line);
+  border-bottom:0;border-radius:9px 9px 0 0;padding:9px 16px 9px 12px}
+.tab img{width:16px;height:16px}
+.tab span{font-size:12.5px;color:var(--nv-ink-3)}
+.tab .x{color:var(--nv-dim);font-size:13px}
+.tab__line{height:8px;background:#E4E6EA;border-top:1px solid var(--nv-line)}
+
+/* Farbrollen */
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:26px}
+.roles div{border-top:2px solid var(--nv-line);padding-top:14px}
+.roles b{display:block;font-family:var(--display);font-weight:400;font-size:22px;margin-bottom:5px}
+.roles span{font-size:14px;color:var(--nv-ink-3)}

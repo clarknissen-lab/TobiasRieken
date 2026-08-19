@@ -4,433 +4,468 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Finanzberatung Rieken — Versicherungsmakler in Hannover</title>
-<meta name="description" content="Tobias Rieken, unabhängiger Versicherungsmakler in Hannover. Absicherung für Beamte und private Haushalte — digital, transparent und ohne Druck.">
-<link rel="icon" href="../assets/logo/signet-solid-tanne.svg">
+<meta name="description" content="Tobias Rieken, unabhängiger Versicherungsmakler in Hannover. Absicherung für Beamte und private Haushalte — verständlich erklärt, ohne Druck. Kostenloses Erstgespräch.">
+<link rel="icon" href="../assets/logo/signet-b-coin.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Symbolvorrat: wenige, ruhige Linienzeichen -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8.3-7 9-4-.7-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M3.5 13a8.5 8.5 0 0 1 17 0z"/><path d="M12 13v6a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h6a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 13 2 2 4-4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.4-5.8-3-5.8 3 1.1-6.4L2.6 9.4l6.5-.9z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.4"/><path d="m8.4 13.6-1.2 7L12 18l4.8 2.6-1.2-7"/></symbol>
+  <symbol id="i-euro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 5.5A6.5 6.5 0 0 0 7.2 9M17 18.5A6.5 6.5 0 0 1 7.2 15M4 10.5h8M4 13.5h8"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.8v.2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.8 20a7.4 7.4 0 0 1 14.4 0"/></symbol>
+</svg>
+
 <!-- ══ Kopfzeile ══════════════════════════════════════════════════════════ -->
-<header class="masthead" id="top">
-  <div class="wrap masthead__in">
-    <a class="brandmark" href="#top" aria-label="Finanzberatung Rieken — Startseite">
-      <img class="brandmark__sig" src="../assets/logo/signet-fine-tanne.svg" alt="">
-      <span class="brandmark__txt">
-        <span class="brandmark__name">Rieken</span>
-        <span class="brandmark__sub">Finanzberatung · Hannover</span>
-      </span>
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Finanzberatung Rieken — Startseite">
+      <img class="brand__mark" src="../assets/logo/signet-a-seal.svg" alt="">
+      <span class="brand__txt"><b>Tobias Rieken</b><span>Finanzberatung</span></span>
     </a>
-    <nav class="mainnav" aria-label="Hauptnavigation">
+    <nav class="nav__links" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
-      <a href="#beamte">Beamte</a>
-      <a href="#ablauf">Ablauf</a>
+      <a href="#beamte">Für Beamte</a>
+      <a href="#ablauf">So läuft es</a>
       <a href="#person">Über mich</a>
     </nav>
-    <a class="cta-line" href="#termin"><span>Erstgespräch</span><span>→</span></a>
+    <!-- Termin läuft über Calendly. Echten Link vor dem Start einsetzen. -->
+    <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">
+      Termin buchen <svg><use href="#i-arr"/></svg></a>
     <button class="burger" aria-label="Menü öffnen"><i></i><i></i></button>
   </div>
 </header>
 
-<!-- ══ Register-Schiene ═══════════════════════════════════════════════════ -->
-<nav class="railnav" aria-label="Abschnitte">
-  <a href="#top"><i></i><b>01</b></a>
-  <a href="#ausgangslage"><i></i><b>02</b></a>
-  <a href="#leistungen"><i></i><b>03</b></a>
-  <a href="#beamte"><i></i><b>04</b></a>
-  <a href="#ablauf"><i></i><b>05</b></a>
-  <a href="#person"><i></i><b>06</b></a>
-  <a href="#stimme"><i></i><b>07</b></a>
-  <a href="#termin"><i></i><b>08</b></a>
-</nav>
-
 <main>
 
-<!-- ══ 01 Auftakt ═════════════════════════════════════════════════════════ -->
-<section class="hero section--tight">
-  <img class="hero__engrave" src="../assets/art/rosette-ink.svg" alt="" aria-hidden="true">
+<!-- ══ Auftakt ════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero__grid"></div>
   <div class="wrap hero__in">
+    <div class="hero__grid2">
 
-    <p class="hero__eyebrow label">
-      <span>Unabhängiger Versicherungsmakler</span><span class="rule"></span><span>Hannover Nordstadt</span>
-    </p>
+      <div>
+        <p class="eyebrow eyebrow--on-navy">Unabhängiger Versicherungsmakler · Hannover</p>
+        <h1 class="d1">Endlich verstehen,<br>wogegen Du<br><span class="serif-em">wirklich</span> abgesichert bist.</h1>
+        <p class="hero__lead">Ich sortiere Deine Verträge, erkläre jeden Punkt in normalem Deutsch und
+          schließe nur die Lücken, die Dich wirklich betreffen. Für Beamte und private Haushalte.</p>
 
-    <h1 class="t-display rise">
-      <span class="ln">Ein Ansprechpartner</span>
-      <span class="ln ln--2">für alles, was</span>
-      <span class="ln ln--3">Dich <em>absichert</em>.</span>
-    </h1>
+        <div class="hero__cta">
+          <a class="btn btn--gold btn--lg" href="https://calendly.com/" target="_blank" rel="noopener">
+            Kostenloses Erstgespräch <svg><use href="#i-arr"/></svg></a>
+          <a class="btn btn--ghost-navy btn--lg" href="#leistungen">
+            Leistungen ansehen <svg><use href="#i-down"/></svg></a>
+        </div>
 
-    <div class="hero__foot">
-      <p class="hero__lead t-lead rise">
-        Beratung für Beamte und private Haushalte. Ich arbeite nicht für eine
-        Gesellschaft, sondern für Dich — digital, nachvollziehbar und ohne Druck.
-      </p>
-      <div class="hero__actions rise">
-        <a class="btn" href="#termin"><span>Kostenloses Erstgespräch</span><span>→</span></a>
-        <a class="cta-line" href="#leistungen"><span>Leistungen ansehen</span><span>↓</span></a>
+        <p class="hero__note"><svg><use href="#i-check"/></svg>
+          30 Minuten · unverbindlich · online oder in Hannover</p>
       </div>
+
+      <aside class="card-glass">
+        <h3>Das Erstgespräch</h3>
+        <p class="sub">Kein Verkauf. Erst schauen, dann rechnen, dann entscheiden.</p>
+        <ul class="checks">
+          <li><svg><use href="#i-check"/></svg>Wir lernen uns kennen — ganz ohne Unterlagen</li>
+          <li><svg><use href="#i-check"/></svg>Wir schauen auf Deine laufenden Verträge</li>
+          <li><svg><use href="#i-check"/></svg>Du erfährst, was fehlt und was doppelt läuft</li>
+          <li><svg><use href="#i-check"/></svg>Du entscheidest in Ruhe. Oder gar nicht.</li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="https://calendly.com/" target="_blank" rel="noopener">
+          Termin im Kalender wählen <svg><use href="#i-cal"/></svg></a>
+        <div class="foot">
+          <span>Antwort meist am selben Tag</span>
+          <span>Kostenlos</span>
+        </div>
+      </aside>
+
     </div>
-
-    <!-- belegbare Angaben statt Dekozahlen -->
-    <div class="facts rise">
-      <div class="facts__i">
-        <p class="facts__v">5,00<span class="unit"> / 5,00</span></p>
-        <p class="facts__k">Bewertung ProvenExpert</p>
-      </div>
-      <div class="facts__i">
-        <p class="facts__v">§ 34d</p>
-        <p class="facts__k">Zulassung Abs. 1 GewO · IHK</p>
-      </div>
-      <div class="facts__i">
-        <p class="facts__v">Unabhängig</p>
-        <p class="facts__k">Im Auftrag des Kunden, nicht der Gesellschaft</p>
-      </div>
-      <div class="facts__i">
-        <p class="facts__v">Hannover</p>
-        <p class="facts__k">Vor Ort &amp; deutschlandweit per Video</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ══ 02 Ausgangslage ════════════════════════════════════════════════════ -->
-<section class="section" id="ausgangslage">
-  <div class="wrap grid">
-    <p class="stance__label label">02 — Ausgangslage</p>
-    <div class="stance__head">
-      <h2 class="t-h2 rise">Die meisten Menschen wissen nicht genau, wogegen sie versichert sind.</h2>
+<!-- ══ Vertrauen ══════════════════════════════════════════════════════════ -->
+<section class="sec sec--sm">
+  <div class="wrap">
+    <div class="trust">
+      <div class="trust__i rise is-gold">
+        <div class="trust__ico"><svg><use href="#i-star"/></svg></div>
+        <p class="trust__v"><span class="count" data-to="5,00">5,00</span> <small>/ 5,00</small></p>
+        <p class="trust__k">Bewertung bei ProvenExpert</p>
+      </div>
+      <div class="trust__i rise">
+        <div class="trust__ico"><svg><use href="#i-badge"/></svg></div>
+        <p class="trust__v">§ 34d</p>
+        <p class="trust__k">Zugelassen von der IHK, Abs. 1 GewO</p>
+      </div>
+      <div class="trust__i rise">
+        <div class="trust__ico"><svg><use href="#i-user"/></svg></div>
+        <p class="trust__v">Für Dich</p>
+        <p class="trust__k">Makler im Auftrag des Kunden — nicht der Versicherung</p>
+      </div>
+      <div class="trust__i rise">
+        <div class="trust__ico"><svg><use href="#i-pin"/></svg></div>
+        <p class="trust__v">Hannover</p>
+        <p class="trust__k">Vor Ort und deutschlandweit per Video</p>
+      </div>
     </div>
-    <div class="stance__body">
-      <p class="t-body rise">Ein Vertrag vom Onkel, einer aus dem Studium, zwei aus dem
-      Vergleichsportal. Zusammen ergibt das selten das, was Du brauchst — dafür
-      oft doppelte Beiträge.</p>
-    </div>
-
-    <!-- Vertragsspiegel: Dokument, nicht Kachel -->
-    <figure class="ledger rise">
-      <figcaption class="ledger__cap">
-        <span class="label">Vertragsspiegel — Auszug</span>
-        <span class="label">Befund nach Sichtung</span>
-      </figcaption>
-
-      <div class="ledger__row">
-        <b>Privathaftpflicht</b><span>Familientarif</span>
-        <span class="amt">4,90 €</span><span class="verdict v-keep">Behalten</span>
-      </div>
-      <div class="ledger__row">
-        <b>Berufsunfähigkeit</b><span>Abschluss 2016</span>
-        <span class="amt">68,40 €</span><span class="verdict v-check">Bedingungen prüfen</span>
-      </div>
-      <div class="ledger__row">
-        <b>Hausrat</b><span>Wohnfläche geändert</span>
-        <span class="amt">12,10 €</span><span class="verdict v-check">Unterversichert</span>
-      </div>
-      <div class="ledger__row">
-        <b>Auslandsreise-Kranken</b><span>zweifach vorhanden</span>
-        <span class="amt">9,90 €</span><span class="verdict v-drop">Doppelt</span>
-      </div>
-      <div class="ledger__row">
-        <b>Rentenversicherung</b><span>Kostenquote 2,1 %</span>
-        <span class="amt">150,00 €</span><span class="verdict v-check">Kosten prüfen</span>
-      </div>
-      <p class="ledger__note">Beispielhafte Darstellung. Deinen echten Vertragsspiegel erhältst Du nach dem Erstgespräch.</p>
-    </figure>
   </div>
 </section>
 
-<!-- ══ 03 Leistungsverzeichnis ════════════════════════════════════════════ -->
-<section class="section tint-hi" id="leistungen">
-  <div class="wrap grid">
-    <div class="index__head">
-      <p class="label" style="margin-bottom:26px">03 — Leistungen</p>
-      <h2 class="t-h2 rise">Was ich für Dich übernehme</h2>
+<!-- ══ Vorher / Nachher ═══════════════════════════════════════════════════ -->
+<section class="sec sec--cream" id="ueberblick">
+  <div class="wrap">
+    <div class="head head--center">
+      <p class="eyebrow">Der Unterschied</p>
+      <h2 class="d2">Aus einem Stapel Papier<br>wird ein klarer Plan.</h2>
+      <p class="lead">So sieht der typische Vertragscheck aus, bevor und nachdem wir uns
+        Deine Unterlagen gemeinsam angesehen haben.</p>
     </div>
-    <p class="index__aside t-body rise">Von der ersten Sichtung bis zum Schadenfall:
-      ein Verzeichnis statt sechs Ansprechpartner.</p>
 
-    <a class="entry rise" href="#termin">
-      <span class="entry__no">01</span>
-      <h3 class="t-h3 entry__t">Absicherung für Beamte</h3>
-      <div class="entry__d">
-        <p class="t-body">Dienstunfähigkeit, Beihilfe und private Krankenversicherung — abgestimmt
-          auf Deinen Dienstherrn und Deinen Status.</p>
-        <div class="entry__tags"><span class="tag">Dienstunfähigkeit</span><span class="tag">Beihilfe</span><span class="tag">Anwärter &amp; Referendare</span></div>
+    <div class="ba rise">
+      <div class="ba__col">
+        <span class="ba__tag t-before">Vorher</span>
+        <div class="ba__row"><span>Einzelne Verträge</span><b>11</b></div>
+        <div class="ba__row"><span>Verschiedene Anbieter</span><b>5</b></div>
+        <div class="ba__row"><span>Ansprechpartner</span><b>5</b></div>
+        <div class="ba__row"><span>Beitrag im Monat</span><b>312 €</b></div>
+        <div class="ba__row"><span>Echte Lücken</span><b>3</b></div>
       </div>
-      <span class="entry__go">→</span>
-    </a>
 
-    <a class="entry rise" href="#termin">
-      <span class="entry__no">02</span>
-      <h3 class="t-h3 entry__t">Einkommen &amp; Gesundheit</h3>
-      <div class="entry__d">
-        <p class="t-body">Was passiert, wenn Du drei Jahre nicht arbeiten kannst? Diese Frage
-          zuerst — dann der Tarif.</p>
-        <div class="entry__tags"><span class="tag">Berufsunfähigkeit</span><span class="tag">Krankenversicherung</span><span class="tag">Unfall</span><span class="tag">Pflege</span></div>
+      <div class="ba__arrow"><svg><use href="#i-arr"/></svg></div>
+
+      <div class="ba__col is-after">
+        <span class="ba__tag t-after">Nachher</span>
+        <div class="ba__row"><span>Einzelne Verträge</span><b>6 <span class="delta">−5</span></b></div>
+        <div class="ba__row"><span>Verschiedene Anbieter</span><b>3 <span class="delta">−2</span></b></div>
+        <div class="ba__row"><span>Ansprechpartner</span><b>1 <span class="delta delta--flat">nur noch einer</span></b></div>
+        <div class="ba__row"><span>Beitrag im Monat</span><b>248 € <span class="delta">−64 €</span></b></div>
+        <div class="ba__row"><span>Echte Lücken</span><b>0 <span class="delta">geschlossen</span></b></div>
       </div>
-      <span class="entry__go">→</span>
-    </a>
+    </div>
+    <p class="ba__note">Beispiel aus der Praxis. Deine eigenen Zahlen bekommst Du nach dem Erstgespräch — schriftlich.</p>
+  </div>
+</section>
 
-    <a class="entry rise" href="#termin">
-      <span class="entry__no">03</span>
-      <h3 class="t-h3 entry__t">Altersvorsorge &amp; Vermögensaufbau</h3>
-      <div class="entry__d">
-        <p class="t-body">Rentenlücke rechnen, Förderungen mitnehmen, Kosten offenlegen.
-          Auch die, die im Kleingedruckten stehen.</p>
-        <div class="entry__tags"><span class="tag">Rentenlücke</span><span class="tag">Förderung</span><span class="tag">Kostenquote</span></div>
-      </div>
-      <span class="entry__go">→</span>
-    </a>
+<!-- ══ Leistungen ═════════════════════════════════════════════════════════ -->
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Leistungen</p>
+      <h2 class="d2">Ein Ansprechpartner für alles,<br>was Dich absichert.</h2>
+      <p class="lead">Von der ersten Sichtung bis zum Schadenfall — Du musst nicht wissen,
+        welcher Vertrag zuständig ist. Das ist mein Job.</p>
+    </div>
 
-    <a class="entry rise" href="#termin">
-      <span class="entry__no">04</span>
-      <h3 class="t-h3 entry__t">Baufinanzierung</h3>
-      <div class="entry__d">
-        <p class="t-body">Von der ersten Kalkulation über die Zinsbindung bis zur
-          Anschlussfinanzierung — inklusive der Absicherung, die dazugehört.</p>
-        <div class="entry__tags"><span class="tag">Kalkulation</span><span class="tag">Zinsbindung</span><span class="tag">Anschluss</span></div>
-      </div>
-      <span class="entry__go">→</span>
-    </a>
+    <div class="cards">
+      <article class="card rise">
+        <div class="card__ico"><svg><use href="#i-shield"/></svg></div>
+        <h3 class="d3">Absicherung für Beamte</h3>
+        <p>Dienstunfähigkeit, Beihilfe und private Krankenversicherung — abgestimmt auf
+          Deinen Dienstherrn und Deinen Status.</p>
+        <div class="chips"><span class="chip">Dienstunfähigkeit</span><span class="chip">Beihilfe</span><span class="chip">Anwärter</span></div>
+      </article>
 
-    <a class="entry rise" href="#termin">
-      <span class="entry__no">05</span>
-      <h3 class="t-h3 entry__t">Sach- &amp; Haftpflichtversicherung</h3>
-      <div class="entry__d">
-        <p class="t-body">Die unspektakulären Verträge, die im Ernstfall den Unterschied machen.
-          Richtig bemessen statt möglichst günstig.</p>
-        <div class="entry__tags"><span class="tag">Privathaftpflicht</span><span class="tag">Hausrat</span><span class="tag">Rechtsschutz</span><span class="tag">Kfz</span></div>
-      </div>
-      <span class="entry__go">→</span>
-    </a>
+      <article class="card rise">
+        <div class="card__ico"><svg><use href="#i-pulse"/></svg></div>
+        <h3 class="d3">Einkommen &amp; Gesundheit</h3>
+        <p>Was passiert, wenn Du drei Jahre nicht arbeiten kannst? Diese Frage klären wir
+          zuerst — der Tarif kommt danach.</p>
+        <div class="chips"><span class="chip">Berufsunfähigkeit</span><span class="chip">Krankenversicherung</span><span class="chip">Unfall</span></div>
+      </article>
 
-    <a class="entry rise" href="#termin">
-      <span class="entry__no">06</span>
-      <h3 class="t-h3 entry__t">Vertragscheck &amp; digitale Verwaltung</h3>
-      <div class="entry__d">
-        <p class="t-body">Bestehende Policen sichten, bündeln und in einer App verfügbar machen.
+      <article class="card rise">
+        <div class="card__ico"><svg><use href="#i-trend"/></svg></div>
+        <h3 class="d3">Altersvorsorge &amp; Vermögen</h3>
+        <p>Rentenlücke ausrechnen, Förderungen mitnehmen, Kosten offenlegen — auch die,
+          die im Kleingedruckten stehen.</p>
+        <div class="chips"><span class="chip">Rentenlücke</span><span class="chip">Förderung</span><span class="chip">Kosten</span></div>
+      </article>
+
+      <article class="card rise">
+        <div class="card__ico"><svg><use href="#i-home"/></svg></div>
+        <h3 class="d3">Baufinanzierung</h3>
+        <p>Von der ersten Kalkulation über die Zinsbindung bis zur Anschlussfinanzierung —
+          samt der Absicherung, die dazugehört.</p>
+        <div class="chips"><span class="chip">Kalkulation</span><span class="chip">Zinsbindung</span><span class="chip">Anschluss</span></div>
+      </article>
+
+      <article class="card rise">
+        <div class="card__ico"><svg><use href="#i-umbrella"/></svg></div>
+        <h3 class="d3">Haftpflicht &amp; Sachwerte</h3>
+        <p>Die unspektakulären Verträge, die im Ernstfall den Unterschied machen.
+          Richtig bemessen statt möglichst billig.</p>
+        <div class="chips"><span class="chip">Privathaftpflicht</span><span class="chip">Hausrat</span><span class="chip">Rechtsschutz</span></div>
+      </article>
+
+      <article class="card rise">
+        <div class="card__ico"><svg><use href="#i-folder"/></svg></div>
+        <h3 class="d3">Vertragscheck &amp; Verwaltung</h3>
+        <p>Bestehende Policen sichten, bündeln und digital verfügbar machen.
           Du siehst jederzeit, was läuft.</p>
-        <div class="entry__tags"><span class="tag">Bestandsübertragung</span><span class="tag">App</span><span class="tag">Schadenmeldung</span></div>
-      </div>
-      <span class="entry__go">→</span>
-    </a>
-  </div>
-</section>
+        <div class="chips"><span class="chip">Bestandsübertragung</span><span class="chip">App</span><span class="chip">Schadenfall</span></div>
+      </article>
 
-<!-- ══ 04 Schwerpunkt Beamte ══════════════════════════════════════════════ -->
-<section class="section--deep on-dark beamte" id="beamte">
-  <div class="beamte__field"><img src="../assets/art/field-dark.svg" alt=""></div>
-  <img class="beamte__ros" src="../assets/art/rosette-light.svg" alt="" aria-hidden="true">
-  <div class="wrap grid beamte__in">
-    <p class="beamte__label label label--dark">04 — Schwerpunkt</p>
-    <div class="beamte__head">
-      <h2 class="t-h2 rise">Beamte sind anders abgesichert.<br>Also berate ich sie auch anders.</h2>
-    </div>
-    <p class="beamte__body t-body rise">Beihilfe, Dienstunfähigkeit, Versorgungsrecht:
-      Drei Themen, bei denen Standardtarife regelmäßig danebenliegen.</p>
-
-    <!-- Erklärgrafik mit Nutzen, kein Dekor -->
-    <figure class="gap rise">
-      <figcaption class="gap__cap">
-        <span class="label label--dark">Beihilfe und Restkosten — Beispiel Beamtin, 70 % Beihilfesatz</span>
-        <span class="label label--dark">100 % Behandlungskosten</span>
-      </figcaption>
-      <div class="bar">
-        <div class="bar__seg seg-aid" style="width:70%"><b>70 %</b><em>Beihilfe des Dienstherrn</em></div>
-        <div class="bar__seg seg-rest" style="width:30%"><b>30 %</b><em>Restkosten — Deine Lücke</em></div>
-      </div>
-      <div class="bar__legend">
-        <span><i style="background:rgba(232,223,205,.35)"></i>Trägt der Dienstherr</span>
-        <span><i style="background:#A9722A"></i>Trägst Du selbst — dafür der passende Ergänzungstarif</span>
-      </div>
-    </figure>
-
-    <div class="pillars">
-      <div class="pillar rise">
-        <span class="num">A</span>
-        <h4>Echte Dienstunfähigkeits&shy;klausel</h4>
-        <p>Nicht jede Berufsunfähigkeitsversicherung greift, wenn der Dienstherr Dich in
-          den Ruhestand versetzt. Ich prüfe die Klausel, nicht den Werbetext.</p>
-      </div>
-      <div class="pillar rise">
-        <span class="num">B</span>
-        <h4>Beihilfe &amp; Restkosten</h4>
-        <p>Der Ergänzungstarif muss zu Deinem Beihilfesatz passen — und mitwachsen,
-          wenn sich Dienstherr, Familienstand oder Satz ändern.</p>
-      </div>
-      <div class="pillar rise">
-        <span class="num">C</span>
-        <h4>Anwärter &amp; Referendare</h4>
-        <p>Günstige Einstiegstarife sind der einfache Teil. Wichtiger ist, was nach der
-          Verbeamtung auf Lebenszeit daraus wird.</p>
-      </div>
+      <article class="card card--wide rise">
+        <div class="card__ico" style="margin-bottom:0"><svg><use href="#i-info"/></svg></div>
+        <p><b style="color:var(--ink)">Nicht sicher, was davon Dich betrifft?</b><br>
+          Genau dafür ist das Erstgespräch da. Wir gehen es gemeinsam durch — kostenlos und unverbindlich.</p>
+        <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">
+          Termin buchen <svg><use href="#i-arr"/></svg></a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ══ 05 Ablauf ══════════════════════════════════════════════════════════ -->
-<section class="section tint" id="ablauf">
-  <div class="wrap grid">
-    <div class="flow__head">
-      <p class="label" style="margin-bottom:26px">05 — Ablauf</p>
-      <h2 class="t-h2 rise">In vier Schritten<br>zum Überblick</h2>
+<!-- ══ Beamte ═════════════════════════════════════════════════════════════ -->
+<section class="sec sec--navy" id="beamte">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow eyebrow--on-navy">Schwerpunkt</p>
+      <h2 class="d2" style="color:#fff">Beamte sind anders abgesichert.<br>Also berate ich sie auch anders.</h2>
+      <p class="lead">Zwei Punkte, bei denen Standardtarife regelmäßig danebenliegen —
+        hier in einfachen Zahlen erklärt.</p>
     </div>
-    <p class="flow__aside t-body rise">Kein Vertrag im ersten Termin. Erst verstehen,
-      dann rechnen, dann entscheiden — in dieser Reihenfolge.</p>
+
+    <div class="explain">
+
+      <!-- Erklärstück 1: die Beihilfelücke -->
+      <div class="panel rise">
+        <div class="panel__h">
+          <div>
+            <h3 class="d3" style="color:#fff">Die Beihilfelücke</h3>
+            <p>Beispiel: Beamtin mit 70 % Beihilfe</p>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="split__p p-aid" style="flex-basis:70%">
+            <b>70 %</b><span>zahlt Dein Dienstherr</span>
+          </div>
+          <div class="split__p p-gap" style="flex-basis:30%">
+            <b>30 %</b><span>zahlst Du selbst</span>
+          </div>
+        </div>
+
+        <ul class="legend">
+          <li><i style="background:#153860"></i>Beihilfe des Dienstherrn</li>
+          <li><i style="background:#C4A05C"></i>Deine Lücke — dafür der Ergänzungstarif</li>
+        </ul>
+
+        <div class="plain">
+          <svg><use href="#i-euro"/></svg>
+          <p>Im Klartext: Kostet eine Behandlung <b>1.000 €</b>, übernimmt der Dienstherr
+            <b>700 €</b>. Die restlichen <b>300 €</b> zahlst Du — es sei denn, ein passender
+            Ergänzungstarif springt ein.</p>
+        </div>
+      </div>
+
+      <!-- Erklärstück 2: DU gegen BU -->
+      <div class="panel rise">
+        <div class="panel__h">
+          <div>
+            <h3 class="d3" style="color:#fff">Dienstunfähigkeit ist nicht Berufsunfähigkeit</h3>
+            <p>Der Unterschied entscheidet, ob gezahlt wird</p>
+          </div>
+        </div>
+
+        <div class="vs">
+          <div class="vs__c is-good">
+            <p class="vs__t" style="color:#fff">Mit echter DU-Klausel</p>
+            <ul>
+              <li><svg class="ic-yes"><use href="#i-check"/></svg>Der Dienstherr versetzt Dich in den Ruhestand — die Versicherung zahlt</li>
+              <li><svg class="ic-yes"><use href="#i-check"/></svg>Keine eigene Nachprüfung durch den Versicherer</li>
+              <li><svg class="ic-yes"><use href="#i-check"/></svg>Gilt auch für Anwärter und Beamte auf Probe</li>
+            </ul>
+          </div>
+          <div class="vs__c">
+            <p class="vs__t" style="color:#fff">Nur Standard-BU</p>
+            <ul>
+              <li><svg class="ic-no"><use href="#i-x"/></svg>Der Versicherer prüft selbst, ob Du arbeiten könntest</li>
+              <li><svg class="ic-no"><use href="#i-x"/></svg>Die Pensionierung allein reicht oft nicht aus</li>
+              <li><svg class="ic-no"><use href="#i-x"/></svg>Im Ernstfall streitet man über Formulierungen</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="plain">
+          <svg><use href="#i-info"/></svg>
+          <p>Ich prüfe die <b>Klausel im Vertrag</b>, nicht den Werbetext auf dem Prospekt.
+            Den Unterschied siehst Du erst, wenn es darauf ankommt.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ Ablauf ═════════════════════════════════════════════════════════════ -->
+<section class="sec" id="ablauf">
+  <div class="wrap">
+    <div class="head head--center">
+      <p class="eyebrow">So läuft es</p>
+      <h2 class="d2">In vier Schritten zum Überblick</h2>
+      <p class="lead">Kein Vertrag im ersten Termin. Erst verstehen, dann rechnen,
+        dann entscheiden — in dieser Reihenfolge.</p>
+    </div>
 
     <ol class="steps">
       <li class="step rise">
-        <p class="step__no num">01</p>
-        <h4>Erstgespräch</h4>
-        <p>Wir lernen uns kennen, sprechen über Deine aktuellen Versicherungen und
-          Finanzen und ermitteln Deinen Bedarf.</p>
-        <p class="step__meta">30 Min · kostenlos · Video oder Hannover</p>
+        <div class="step__n">1</div>
+        <div class="step__b">
+          <h4 class="d4">Erstgespräch</h4>
+          <p>Wir lernen uns kennen, sprechen über Deine Verträge und Finanzen und
+            klären, was Du brauchst.</p>
+          <span class="step__meta">30 Min · kostenlos</span>
+        </div>
       </li>
       <li class="step rise">
-        <p class="step__no num">02</p>
-        <h4>Analyse</h4>
-        <p>Ich sichte Deine Unterlagen und rechne durch, was fehlt, was doppelt läuft
-          und was weg kann.</p>
-        <p class="step__meta">Du musst nichts vorbereiten</p>
+        <div class="step__n">2</div>
+        <div class="step__b">
+          <h4 class="d4">Analyse</h4>
+          <p>Ich sichte Deine Unterlagen und rechne durch, was fehlt, was doppelt läuft
+            und was weg kann.</p>
+          <span class="step__meta">Du bereitest nichts vor</span>
+        </div>
       </li>
       <li class="step rise">
-        <p class="step__no num">03</p>
-        <h4>Vorschlag</h4>
-        <p>Du bekommst eine schriftliche Empfehlung — mit Begründung, Kosten und
-          Alternativen. Ohne Termindruck.</p>
-        <p class="step__meta">Schriftlich, zum Nachlesen</p>
+        <div class="step__n">3</div>
+        <div class="step__b">
+          <h4 class="d4">Vorschlag</h4>
+          <p>Du bekommst eine schriftliche Empfehlung — mit Begründung, Kosten und
+            Alternativen. Ohne Termindruck.</p>
+          <span class="step__meta">Zum Nachlesen</span>
+        </div>
       </li>
       <li class="step rise">
-        <p class="step__no num">04</p>
-        <h4>Umsetzung &amp; Betreuung</h4>
-        <p>Ich übernehme Anträge und Kündigungen und bleibe Dein Ansprechpartner —
-          besonders im Schadenfall.</p>
-        <p class="step__meta">Dauerhaft, nicht projektweise</p>
+        <div class="step__n">4</div>
+        <div class="step__b">
+          <h4 class="d4">Umsetzung</h4>
+          <p>Ich übernehme Anträge und Kündigungen — und bleibe Dein Ansprechpartner,
+            besonders im Schadenfall.</p>
+          <span class="step__meta">Dauerhaft</span>
+        </div>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ══ 06 Person ══════════════════════════════════════════════════════════ -->
-<section class="section" id="person">
-  <div class="wrap grid">
-    <div class="person__portrait rise">
-      <div class="frame">
-        <img class="frame__bg" src="../assets/art/field-dark.svg" alt="">
-        <img class="frame__ros" src="../assets/art/rosette-light.svg" alt="">
-        <span class="frame__marks"><i></i><i></i><i></i><i></i></span>
-        <span class="frame__fmt">3 : 4</span>
-        <span class="frame__cap">Portrait Tobias Rieken<br>Fotoproduktion vorgesehen</span>
-      </div>
-      <div class="docket">
-        <img class="docket__seal" src="../assets/art/seal.svg" alt="" aria-hidden="true">
-        <dl>
-          <dt>Zulassung</dt><dd>Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO</dd>
-          <dt>Register</dt><dd>D-SSZS-O2N97-97 · Vermittlerregister</dd>
-          <dt>Aufsicht</dt><dd>Industrie- und Handelskammer</dd>
-          <dt>Standort</dt><dd>Türkstraße 2, 30167 Hannover</dd>
-        </dl>
-      </div>
+<!-- ══ Person ═════════════════════════════════════════════════════════════ -->
+<section class="sec sec--cream" id="person">
+  <div class="wrap person">
+    <div class="portrait rise">
+      <div class="portrait__grid"></div>
+      <img class="portrait__mark" src="../assets/logo/signet-a-seal-invers.svg" alt="">
+      <p class="portrait__cap">Portrait Tobias Rieken · Fotoproduktion vorgesehen</p>
     </div>
 
-    <div class="person__body">
-      <p class="label" style="margin-bottom:26px">06 — Person</p>
-      <h2 class="t-h2 rise">Tobias Rieken</h2>
-      <p class="person__role">Versicherungsmakler &amp; Finanzplaner</p>
-      <p class="t-lead rise">Willkommen bei Deinem persönlichen Versicherungsmakler. Ich stehe Dir
-        jederzeit zur Verfügung, um Dich bei allen Fragen rund um Versicherungen und
-        Finanzen zu unterstützen.</p>
-      <blockquote class="person__quote rise">Ich bin Dein digitaler Ansprechpartner, der Dir auch
-        online immer zur Seite steht. Mit modernen Tools und digitalen Lösungen sorge ich
-        dafür, dass Du immer den Überblick über Deine Absicherungen und Finanzen behältst.</blockquote>
-      <p class="sig">Tobias Rieken</p>
-      <p class="person__cta">
-        <span class="rule"></span>
-        <a class="cta-line" href="#termin"><span>Erstgespräch vereinbaren</span><span>→</span></a>
-      </p>
-    </div>
+    <div>
+      <p class="person__role"><svg style="width:15px;height:15px"><use href="#i-badge"/></svg>
+        Versicherungsmakler &amp; Finanzplaner</p>
+      <h2 class="d2">Tobias Rieken</h2>
+      <p class="lead" style="margin-top:16px">Willkommen bei Deinem persönlichen Versicherungsmakler.
+        Ich stehe Dir jederzeit zur Verfügung, um Dich bei allen Fragen rund um Versicherungen
+        und Finanzen zu unterstützen.</p>
 
-  </div>
-</section>
+      <blockquote class="quote">Ich bin Dein digitaler Ansprechpartner, der Dir auch online immer
+        zur Seite steht. Mit modernen Tools und digitalen Lösungen sorge ich dafür, dass Du
+        immer den Überblick über Deine Absicherungen und Finanzen behältst.</blockquote>
 
-<!-- ══ 07 Stimme ══════════════════════════════════════════════════════════ -->
-<section class="section tint-hi voice" id="stimme">
-  <div class="wrap grid">
-    <div class="voice__q">
-      <p class="label" style="margin-bottom:34px">07 — Stimmen</p>
-      <blockquote class="rise"><span class="qm">„</span>Tobi weiß, wovon er redet und kommt ohne Druck
-        auf den Punkt. Er hat es geschafft, mir eine Auszeit von meinen alten Versicherungen
-        zu verschaffen und die Kosten sehr transparent erklärt.<span class="qm">“</span></blockquote>
-      <p class="voice__by">
-        <span class="rule"></span>
-        <span class="label">Kundenbewertung · ProvenExpert · 04.11.2025</span>
-      </p>
-    </div>
-    <div class="voice__score rise">
-      <b>5,00<span class="of"> / 5,00</span></b>
-      <span class="label">Gesamtbewertung</span>
+      <dl class="creds">
+        <div class="cred"><dt>Zulassung</dt><dd>§ 34d Abs. 1 GewO</dd></div>
+        <div class="cred"><dt>Vermittlerregister</dt><dd>D-SSZS-O2N97-97</dd></div>
+        <div class="cred"><dt>Aufsicht</dt><dd>Industrie- und Handelskammer</dd></div>
+        <div class="cred"><dt>Büro</dt><dd>Türkstraße 2, Hannover</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
-<!-- ══ 08 Termin ══════════════════════════════════════════════════════════ -->
-<section class="section--deep on-dark book" id="termin">
-  <img class="book__ros" src="../assets/art/rosette-light.svg" alt="" aria-hidden="true">
-  <div class="wrap grid">
-    <div class="book__head">
-      <p class="label label--dark">08 — Termin</p>
-      <h2 class="t-h2 rise">30 Minuten. Kostenlos.<br>Ohne Verpflichtung.</h2>
-      <p class="t-lead rise">Im Erstgespräch lernen wir uns kennen, sehen uns Deine aktuellen
-        Verträge an und klären, was Du wirklich brauchst.</p>
+<!-- ══ Stimmen ════════════════════════════════════════════════════════════ -->
+<section class="sec sec--blue">
+  <div class="wrap">
+    <div class="head head--center">
+      <p class="eyebrow">Stimmen</p>
+      <h2 class="d2">Was Kunden sagen</h2>
     </div>
 
-    <div class="book__panel rise">
-      <div class="sched">
-        <div class="sched__top">
-          <span class="sched__mode is-on"><i></i>Video</span>
-          <span class="sched__mode"><i></i>Vor Ort<span class="only-wide">&nbsp;in Hannover</span></span>
+    <div class="voice">
+      <div class="voice__card rise">
+        <p class="voice__q">„Tobi weiß, wovon er redet und kommt ohne Druck auf den Punkt.
+          Er hat es geschafft, mir eine Auszeit von meinen alten Versicherungen zu verschaffen
+          und die Kosten sehr transparent erklärt.“</p>
+        <div class="voice__by">
+          <span class="voice__av">K</span>
+          <span>
+            <b>Kundenbewertung</b>
+            <span>ProvenExpert · 4. November 2025</span>
+          </span>
         </div>
-        <div class="sched__days">
-          <span class="day"><em>Mo</em><b>15</b></span>
-          <span class="day is-on"><em>Di</em><b>16</b></span>
-          <span class="day"><em>Mi</em><b>17</b></span>
-          <span class="day"><em>Do</em><b>18</b></span>
-          <span class="day"><em>Fr</em><b>19</b></span>
-        </div>
-        <div class="slots">
-          <span class="slot is-off">08:30</span>
-          <span class="slot">09:15</span>
-          <span class="slot is-on">10:00</span>
-          <span class="slot">11:30</span>
-          <span class="slot is-off">13:00</span>
-          <span class="slot">14:15</span>
-          <span class="slot">16:00</span>
-          <span class="slot">17:45</span>
-        </div>
-        <div class="sched__foot">
-          <p class="sched__pick"><span class="label label--dark">Gewählt</span>Di, 16. · 10:00 Uhr · Video</p>
-          <a class="btn btn--brass btn--wide" href="#termin"><span>Termin bestätigen</span><span>→</span></a>
-        </div>
+      </div>
+
+      <div class="score rise">
+        <p class="score__v">5,00<small> / 5,00</small></p>
+        <p class="stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </p>
+        <p>Gesamtbewertung bei ProvenExpert</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="book__side rise">
-      <p class="label label--dark" style="margin-bottom:22px">Oder direkt</p>
-      <div class="contact__i">
-        <span class="contact__k">Telefon</span>
-        <a class="contact__v" href="tel:+4917684330319">+49 176 84330319</a>
+<!-- ══ Termin ═════════════════════════════════════════════════════════════ -->
+<section class="sec book" id="termin">
+  <div class="wrap book__in">
+    <div>
+      <p class="eyebrow eyebrow--on-navy">Termin</p>
+      <h2 class="d2">30 Minuten, die Dir viel Papier ersparen.</h2>
+      <p class="lead">Such Dir einfach einen Termin aus, der Dir passt. Wir sprechen über
+        Deine Situation — ganz ohne Verpflichtung und ohne Vorbereitung.</p>
+
+      <div class="book__cta">
+        <a class="btn btn--gold btn--lg" href="https://calendly.com/" target="_blank" rel="noopener">
+          Freien Termin auswählen <svg><use href="#i-cal"/></svg></a>
+        <a class="btn btn--ghost-navy btn--lg" href="tel:+4917684330319">
+          Lieber anrufen <svg><use href="#i-phone"/></svg></a>
       </div>
-      <div class="contact__i">
-        <span class="contact__k">E-Mail</span>
-        <a class="contact__v" href="mailto:info@trieken.com">info@trieken.com</a>
-      </div>
-      <div class="contact__i">
-        <span class="contact__k">Büro</span>
-        <span class="contact__v">Türkstraße 2<small>30167 Hannover · Nordstadt</small></span>
-      </div>
-      <div class="contact__i">
-        <span class="contact__k">Erreichbar</span>
-        <span class="contact__v">Mo – Fr<small>Termine auch abends nach Absprache</small></span>
+
+      <ul class="book__meta">
+        <li><svg><use href="#i-clock"/></svg>30 Minuten</li>
+        <li><svg><use href="#i-check"/></svg>Kostenlos</li>
+        <li><svg><use href="#i-cal"/></svg>Online oder in Hannover</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <a href="tel:+4917684330319">
+        <span class="contact__ic"><svg><use href="#i-phone"/></svg></span>
+        <span><b>+49 176 84330319</b><span>Mo – Fr, Termine auch abends</span></span>
+      </a>
+      <a href="mailto:info@trieken.com">
+        <span class="contact__ic"><svg><use href="#i-mail"/></svg></span>
+        <span><b>info@trieken.com</b><span>Antwort meist am selben Tag</span></span>
+      </a>
+      <div>
+        <span class="contact__ic"><svg><use href="#i-pin"/></svg></span>
+        <span><b>Türkstraße 2</b><span>30167 Hannover · Nordstadt</span></span>
       </div>
     </div>
   </div>
@@ -442,49 +477,44 @@
 <footer class="foot">
   <div class="wrap">
     <div class="foot__top">
-      <div class="foot__brand">
-        <a class="brandmark" href="#top" style="margin-bottom:20px">
-          <img class="brandmark__sig" src="../assets/logo/signet-fine-invers.svg" alt="">
-          <span class="brandmark__txt">
-            <span class="brandmark__name" style="color:var(--tanne-ink)">Rieken</span>
-            <span class="brandmark__sub" style="color:var(--tanne-ink-60)">Finanzberatung · Hannover</span>
-          </span>
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:18px">
+          <img class="brand__mark" src="../assets/logo/signet-a-seal-invers.svg" alt="">
+          <span class="brand__txt"><b>Tobias Rieken</b><span>Finanzberatung</span></span>
         </a>
-        <p class="t-small" style="max-width:34ch;color:var(--tanne-ink-60)">
-          Tobias Rieken — Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO.
-          Registernummer D-SSZS-O2N97-97.</p>
+        <p class="small" style="color:var(--on-navy-soft);max-width:34ch">
+          Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO.
+          Vermittlerregister D-SSZS-O2N97-97.</p>
       </div>
-      <div class="foot__col">
+      <div>
         <h5>Seite</h5>
         <ul>
           <li><a href="#leistungen">Leistungen</a></li>
-          <li><a href="#beamte">Beamte</a></li>
-          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#beamte">Für Beamte</a></li>
+          <li><a href="#ablauf">So läuft es</a></li>
           <li><a href="#person">Über mich</a></li>
-          <li><a href="#termin">Termin</a></li>
         </ul>
       </div>
-      <div class="foot__col">
+      <div>
         <h5>Rechtliches</h5>
         <ul>
           <li><a href="#">Impressum</a></li>
           <li><a href="#">Datenschutz</a></li>
           <li><a href="#">AGB</a></li>
           <li><a href="#">Erstinformation</a></li>
-          <li><a href="#">Beschwerde &amp; Schlichtung</a></li>
         </ul>
       </div>
-      <div class="foot__col" style="grid-column:11/span 2">
+      <div>
         <h5>Kontakt</h5>
         <ul>
           <li><a href="tel:+4917684330319">+49 176 84330319</a></li>
           <li><a href="mailto:info@trieken.com">info@trieken.com</a></li>
-          <li><a href="#termin">Türkstraße 2<br>30167 Hannover</a></li>
+          <li>Türkstraße 2<br>30167 Hannover</li>
         </ul>
       </div>
     </div>
     <div class="foot__bot">
-      <p>© 2026 Finanzberatung Rieken · Tobias Rieken</p>
+      <p>© 2026 Tobias Rieken · Finanzberatung Rieken</p>
       <p>Gestaltung &amp; Umsetzung: <a href="#">Novera Studio</a></p>
     </div>
   </div>
@@ -492,12 +522,9 @@
 
 <!-- ══ Mobile Aktionsleiste ═══════════════════════════════════════════════ -->
 <div class="dock">
-  <a class="btn btn--brass" href="#termin"><span>Erstgespräch buchen</span><span>→</span></a>
-  <a class="dock__tel" href="tel:+4917684330319" aria-label="Anrufen">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/>
-    </svg>
-  </a>
+  <a class="btn btn--gold" href="https://calendly.com/" target="_blank" rel="noopener">
+    Termin buchen <svg><use href="#i-arr"/></svg></a>
+  <a class="dock__tel" href="tel:+4917684330319" aria-label="Anrufen"><svg><use href="#i-phone"/></svg></a>
 </div>
 
 <script src="script.js"></script>

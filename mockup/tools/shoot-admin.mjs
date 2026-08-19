@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const OUT = '/home/user/TobiasRieken/mockup/build/shots';
 fs.mkdirSync(OUT, { recursive: true });
 const b = await chromium.launch();
-for (const [file, name, h] of [['login', 'admin-login', 1000], ['panel', 'admin-panel', 1160]]) {
+for (const [file, name, h] of [['login', 'admin-login', 900], ['panel', 'admin-panel', 1020]]) {
   const p = await b.newPage({ viewport: { width: 1600, height: h }, deviceScaleFactor: 2 });
   await p.goto(`file:///home/user/TobiasRieken/mockup/site/admin/${file}.html`);
   await p.evaluate(() => document.fonts.ready);

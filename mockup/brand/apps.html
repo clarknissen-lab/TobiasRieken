@@ -4,227 +4,200 @@
 <style>
 @import url("../assets/fonts.css");
 :root{
-  --paper:#F2EDE4;--paper-hi:#FBF9F4;--paper-lo:#E9E2D5;
-  --ink:#14171A;--ink-70:#414850;--ink-45:#6E7681;--ink-25:#9AA0A8;
-  --tanne:#14332C;--tanne-lo:#0C201C;--tanne-ink:#E8DFCD;--tanne-ink-60:#A9B5AC;
-  --messing:#A9722A;--messing-hi:#C89551;
-  --line:rgba(20,23,26,.15);--line-dark:rgba(232,223,205,.20);
-  --display:'Newsreader',Georgia,serif;--sans:'Archivo',Arial,sans-serif;--mono:'Plex Mono',monospace;
+  --navy-900:#0B2039;--navy-800:#0D2440;--navy-700:#153860;--blue-500:#2C6BB8;
+  --blue-100:#D9E7F6;--blue-50:#EEF5FC;
+  --cream-50:#FDFBF7;--cream-100:#F8F2E8;--cream-200:#F0E6D6;
+  --gold-600:#A9853F;--gold-500:#C4A05C;--gold-300:#E0C68D;
+  --ink:#14202E;--slate-500:#5C6E85;--slate-400:#8494A7;--on-navy:#EAF1F9;--on-navy-soft:#A9BED6;
+  --line:#E5EAF1;--line-navy:rgba(234,241,249,.18);
+  --display:'Playfair',Georgia,serif;--sans:'Inter',Arial,sans-serif;
+  --sh:0 30px 60px -40px rgba(11,32,57,.7);
 }
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:#DCD5C7;font-family:var(--sans);color:var(--ink);
+body{margin:0;background:#C9C2B4;font-family:var(--sans);color:var(--ink);
   display:flex;flex-wrap:wrap;gap:40px;padding:40px;align-items:flex-start}
 img{display:block;max-width:100%}
 p,h1,h2,h3{margin:0}
-.mono{font-family:var(--mono)}
-.lbl{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-45)}
+.lbl{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--slate-400)}
 
-/* ── Visitenkarte ─────────────────────────────────────────────── */
-.vk{width:496px;height:321px;position:relative;overflow:hidden;
-    box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.vk--f{background:var(--paper);padding:44px 46px;display:flex;flex-direction:column}
-.vk--f .sig{width:52px;height:52px;margin-bottom:auto}
-.vk--f .wm b{font-family:var(--display);font-weight:400;font-size:31px;letter-spacing:.22em;
-  text-transform:uppercase;display:block;line-height:1}
-.vk--f .wm span{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.26em;
-  text-transform:uppercase;color:var(--ink-45);display:block;margin-top:9px}
-.vk--f .band{position:absolute;left:0;right:0;bottom:0;height:52px;opacity:.55}
-.vk--f .band img{width:100%;height:100%;object-fit:cover}
+/* Visitenkarte 85 × 55 mm */
+.vk{width:496px;height:321px;position:relative;overflow:hidden;border-radius:10px;box-shadow:var(--sh)}
+.vk--f{background:var(--cream-50);padding:42px 44px;display:flex;flex-direction:column}
+.vk--f img{width:64px;height:64px;margin-bottom:auto}
+.vk--f b{display:block;font-family:var(--display);font-weight:500;font-size:31px;letter-spacing:-.01em}
+.vk--f span{display:block;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--slate-400);margin-top:9px}
+.vk--f .rule{width:52px;height:3px;border-radius:3px;margin-top:20px;
+  background:linear-gradient(90deg,var(--blue-500),var(--gold-500))}
 
-.vk--b{background:var(--tanne);color:var(--tanne-ink);padding:40px 46px;display:flex;
-  flex-direction:column;justify-content:space-between}
-.vk--b .ros{position:absolute;right:-32%;top:-38%;width:88%;opacity:.34}
-.vk--b .nm{font-family:var(--display);font-weight:300;font-size:27px;letter-spacing:-.01em;position:relative}
-.vk--b .rl{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--messing-hi);margin-top:8px;position:relative}
-.vk--b .ct{position:relative;font-size:13.5px;line-height:1.85;color:var(--tanne-ink)}
-.vk--b .ct em{font-style:normal;color:var(--tanne-ink-60);font-family:var(--mono);font-size:9px;
-  letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:7px}
-.vk--b .reg{position:relative;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--tanne-ink-60);border-top:1px solid var(--line-dark);padding-top:12px}
+.vk--b{padding:38px 44px;display:flex;flex-direction:column;justify-content:space-between;
+  color:var(--on-navy);
+  background:radial-gradient(90% 80% at 85% 8%,rgba(74,138,212,.32),transparent 58%),
+             radial-gradient(70% 70% at 8% 96%,rgba(196,160,92,.20),transparent 62%),
+             linear-gradient(160deg,#0C2544,#081A30)}
+.vk--b .nm{font-family:var(--display);font-weight:500;font-size:27px;color:#fff}
+.vk--b .rl{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-300);margin-top:8px}
+.vk--b .ct{font-size:14px;line-height:1.9;color:var(--on-navy)}
+.vk--b .reg{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--on-navy-soft);border-top:1px solid var(--line-navy);padding-top:12px}
 
-/* ── Briefbogen ───────────────────────────────────────────────── */
-.bb{width:430px;height:608px;background:var(--paper-hi);position:relative;overflow:hidden;
-    padding:38px 40px;box-shadow:0 26px 50px -34px rgba(20,23,26,.55);display:flex;flex-direction:column}
-.bb__h{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
-  padding-bottom:18px;border-bottom:1px solid var(--ink)}
-.bb__h .wm b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.2em;
-  text-transform:uppercase;display:block;line-height:1}
-.bb__h .wm span{font-family:var(--mono);font-size:7px;font-weight:500;letter-spacing:.24em;
-  text-transform:uppercase;color:var(--ink-45);display:block;margin-top:5px}
-.bb__h .meta{text-align:right;font-family:var(--mono);font-size:7.5px;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--ink-45);line-height:2}
-.bb__adr{font-family:var(--mono);font-size:7px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-25);margin-top:34px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+/* Briefbogen A4 */
+.bb{width:430px;height:608px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:var(--sh);
+  padding:36px 40px;display:flex;flex-direction:column;position:relative}
+.bb__h{display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding-bottom:16px;border-bottom:2px solid var(--navy-800)}
+.bb__h .l{display:flex;align-items:center;gap:11px}
+.bb__h img{width:34px;height:34px}
+.bb__h b{display:block;font-family:var(--display);font-weight:500;font-size:16px;line-height:1.1}
+.bb__h .sub{display:block;font-size:7px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--slate-400);margin-top:3px}
+.bb__h .meta{text-align:right;font-size:7.5px;letter-spacing:.06em;color:var(--slate-400);line-height:1.9}
+.bb__adr{font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-400);
+  margin-top:30px;padding-bottom:5px;border-bottom:1px solid var(--line)}
 .bb__to{margin-top:14px;font-size:11.5px;line-height:1.75}
-.bb__sub{margin-top:34px;font-weight:600;font-size:12px}
-.bb__tx{margin-top:14px;font-size:11.5px;line-height:1.85;color:var(--ink-70);max-width:44ch}
-.bb__sg{margin-top:26px;font-family:var(--display);font-style:italic;font-weight:300;font-size:20px;color:var(--ink-70)}
-.bb__f{margin-top:auto;position:relative;padding-top:16px;border-top:1px solid var(--line);
-  display:flex;justify-content:space-between;gap:14px;font-family:var(--mono);font-size:6.6px;
-  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-45);line-height:1.9}
-.bb__band{position:absolute;left:0;right:0;bottom:0;height:40px;opacity:.5}
-.bb__band img{width:100%;height:100%;object-fit:cover}
+.bb__sub{margin-top:30px;font-family:var(--display);font-weight:600;font-size:13px}
+.bb__tx{margin-top:12px;font-size:11.5px;line-height:1.9;color:var(--slate-500);max-width:46ch}
+.bb__sg{margin-top:22px;font-family:var(--display);font-style:italic;font-weight:500;font-size:19px;
+  color:var(--navy-800)}
+.bb__f{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;
+  justify-content:space-between;gap:14px;font-size:6.6px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--slate-400);line-height:1.9}
+.bb__bar{position:absolute;left:0;right:0;bottom:0;height:6px;
+  background:linear-gradient(90deg,var(--navy-800),var(--blue-500) 55%,var(--gold-500))}
 
-/* ── E-Mail-Signatur ──────────────────────────────────────────── */
-.sg{width:600px;background:#fff;padding:26px 30px;display:flex;gap:22px;align-items:flex-start;
-  box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.sg__l{width:64px;flex:none;border-right:1px solid var(--line);padding-right:22px}
-.sg__l img{width:44px;height:44px}
-.sg b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:-.01em;display:block}
-.sg .rl{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--messing);margin-top:5px}
-.sg .ct{margin-top:13px;font-size:12.5px;line-height:1.8;color:var(--ink-70)}
-.sg .rg{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-family:var(--mono);
-  font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-25);line-height:1.9}
+/* E-Mail-Signatur */
+.sg{width:600px;background:#fff;border-radius:10px;padding:26px 30px;display:flex;gap:22px;
+  align-items:center;box-shadow:var(--sh)}
+.sg img{width:62px;height:62px;flex:none}
+.sg .bar{width:2px;align-self:stretch;background:linear-gradient(180deg,var(--blue-500),var(--gold-500));
+  border-radius:2px}
+.sg b{display:block;font-family:var(--display);font-weight:600;font-size:20px}
+.sg .rl{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold-600);margin-top:5px}
+.sg .ct{margin-top:12px;font-size:12.5px;line-height:1.8;color:var(--slate-500)}
+.sg .rg{margin-top:10px;font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--slate-400)}
 
-/* ── Avatar & Siegel ──────────────────────────────────────────── */
-.av{width:230px;height:230px;background:var(--tanne);display:grid;place-items:center;
-  box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.av img{width:120px;height:120px}
-.st{width:230px;height:230px;background:var(--paper);display:grid;place-items:center;position:relative;
-  box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.st__in{width:172px;height:172px;border:1.5px solid var(--messing);border-radius:50%;
-  display:grid;place-items:center;text-align:center;position:relative}
-.st__in img{position:absolute;width:150px;height:150px;opacity:.5}
-.st__tx{position:relative;font-family:var(--mono);font-size:8px;letter-spacing:.19em;
-  text-transform:uppercase;color:var(--messing);line-height:2.1}
-.st__tx b{font-family:var(--display);font-weight:400;font-size:19px;letter-spacing:.2em;display:block;
-  color:var(--tanne);margin-bottom:5px}
+/* Profilbild & Stempel */
+.av{width:230px;height:230px;border-radius:26px;display:grid;place-items:center;box-shadow:var(--sh);
+  background:radial-gradient(80% 70% at 70% 15%,rgba(74,138,212,.34),transparent 60%),
+             linear-gradient(155deg,#0C2544,#081A30)}
+.av img{width:126px;height:126px}
+.st{width:230px;height:230px;border-radius:26px;background:var(--cream-100);display:grid;place-items:center;
+  box-shadow:var(--sh)}
+.st img{width:150px;height:150px}
 
-/* ── Farbe ────────────────────────────────────────────────────── */
-.pal{width:1020px;display:grid;grid-template-columns:repeat(6,1fr);background:var(--paper-hi);
-  box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.sw{padding:0}
-.sw i{display:block;height:132px}
-.sw div{padding:14px 16px 18px;border-right:1px solid var(--line)}
+/* Farbe */
+.pal{width:1020px;display:grid;grid-template-columns:repeat(7,1fr);background:#fff;border-radius:12px;
+  overflow:hidden;box-shadow:var(--sh)}
+.sw i{display:block;height:126px}
+.sw div{padding:13px 14px 16px;border-right:1px solid var(--line)}
 .sw:last-child div{border-right:0}
-.sw b{display:block;font-size:12.5px;font-weight:500}
-.sw span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink-45);margin-top:5px}
+.sw b{display:block;font-size:12px;font-weight:600}
+.sw span{display:block;font-size:10px;letter-spacing:.05em;color:var(--slate-400);margin-top:4px}
 
-/* ── Schrift ──────────────────────────────────────────────────── */
-.ty{width:1020px;background:var(--paper-hi);padding:36px 40px;
-  box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.ty__r{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:22px 0;border-top:1px solid var(--line)}
+/* Schrift */
+.ty{width:1020px;background:#fff;border-radius:12px;padding:34px 38px;box-shadow:var(--sh)}
+.ty__r{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:22px 0;border-top:1px solid var(--line)}
 .ty__r:first-of-type{border-top:0;padding-top:0}
 .ty__k b{display:block;font-size:13px;font-weight:600}
-.ty__k span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-45);margin-top:5px}
-.spec-d{font-family:var(--display);font-weight:300;font-size:44px;line-height:1.06;letter-spacing:-.02em}
-.spec-s{font-family:var(--sans);font-size:19px;line-height:1.5;color:var(--ink-70)}
-.spec-m{font-family:var(--mono);font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-45)}
+.ty__k span{display:block;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--slate-400);margin-top:5px}
+.spec-d{font-family:var(--display);font-weight:500;font-size:42px;line-height:1.1;letter-spacing:-.02em}
+.spec-s{font-size:18px;line-height:1.6;color:var(--slate-500)}
+.spec-l{font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-500)}
 
-/* ── Signet-Fassungen ─────────────────────────────────────────── */
-.sgs{width:1020px;background:var(--paper-hi);display:grid;grid-template-columns:repeat(5,1fr);
-  box-shadow:0 26px 50px -34px rgba(20,23,26,.55)}
-.sgs__c{padding:30px 22px 22px;border-right:1px solid var(--line);text-align:center}
+/* Signet-Fassungen */
+.sgs{width:1020px;background:#fff;border-radius:12px;overflow:hidden;display:grid;
+  grid-template-columns:repeat(5,1fr);box-shadow:var(--sh)}
+.sgs__c{padding:30px 20px 22px;border-right:1px solid var(--line);text-align:center}
 .sgs__c:last-child{border-right:0}
-.sgs__c.dark{background:var(--tanne)}
-.sgs__c.dark .lbl{color:var(--tanne-ink-60)}
-.sgs__c img{width:88px;height:88px;margin:0 auto 18px}
-.sgs__c img.sm{width:34px;height:34px;margin-bottom:10px}
+.sgs__c.dark{background:linear-gradient(160deg,#0C2544,#081A30)}
+.sgs__c.dark .lbl{color:var(--on-navy-soft)}
+.sgs__c img{width:82px;height:82px;margin:0 auto 16px}
+.sgs__c .row{display:flex;gap:12px;justify-content:center;align-items:flex-end;margin-bottom:16px}
+.sgs__c .row img{width:34px;height:34px;margin:0}
+.sgs__c .row img.xs{width:18px;height:18px}
 </style></head><body>
 
-<!-- Visitenkarte Vorderseite -->
 <div class="vk vk--f" id="vk-f">
-  <img class="sig" src="../assets/logo/signet-fine-tanne.svg" alt="">
-  <div class="wm"><b>Rieken</b><span>Finanzberatung · Hannover</span></div>
-  <div class="band"><img src="../assets/art/band-light.svg" alt=""></div>
+  <img src="../assets/logo/signet-a-seal.svg" alt="">
+  <div><b>Tobias Rieken</b><span>Finanzberatung · Hannover</span>
+    <div class="rule"></div></div>
 </div>
 
-<!-- Visitenkarte Rückseite -->
 <div class="vk vk--b" id="vk-b">
-  <img class="ros" src="../assets/art/rosette-light.svg" alt="">
-  <div>
-    <p class="nm">Tobias Rieken</p>
-    <p class="rl">Versicherungsmakler &amp; Finanzplaner</p>
-  </div>
-  <div class="ct">
-    <em>Kontakt</em>
-    +49 176 84330319<br>info@trieken.com<br>Türkstraße 2 · 30167 Hannover
-  </div>
+  <div><p class="nm">Tobias Rieken</p><p class="rl">Versicherungsmakler &amp; Finanzplaner</p></div>
+  <p class="ct">+49 176 84330319<br>info@trieken.com<br>Türkstraße 2 · 30167 Hannover</p>
   <p class="reg">§ 34d Abs. 1 GewO · Register D-SSZS-O2N97-97</p>
 </div>
 
-<!-- Briefbogen -->
 <div class="bb" id="bb">
   <div class="bb__h">
-    <div class="wm"><b>Rieken</b><span>Finanzberatung · Hannover</span></div>
-    <div class="meta">Tobias Rieken<br>Türkstraße 2 · 30167 Hannover<br>+49 176 84330319</div>
+    <div class="l"><img src="../assets/logo/signet-a-seal.svg" alt="">
+      <span><b>Tobias Rieken</b><span class="sub">Finanzberatung</span></span></div>
+    <div class="meta">Türkstraße 2 · 30167 Hannover<br>+49 176 84330319 · info@trieken.com</div>
   </div>
-  <p class="bb__adr">Finanzberatung Rieken · Türkstraße 2 · 30167 Hannover</p>
+  <p class="bb__adr">Tobias Rieken · Türkstraße 2 · 30167 Hannover</p>
   <p class="bb__to">Frau<br>Merle Ahrends<br>Musterweg 14<br>30159 Hannover</p>
   <p class="bb__sub">Deine Absicherung — Empfehlung nach dem Erstgespräch</p>
-  <p class="bb__tx">Hallo Merle,<br><br>anbei findest Du die Auswertung Deiner bestehenden Verträge sowie
-    meine Empfehlung zur Dienstunfähigkeit. Ich habe zu jedem Punkt notiert, warum ich ihn
+  <p class="bb__tx">Hallo Merle,<br><br>anbei findest Du die Auswertung Deiner bestehenden Verträge
+    sowie meine Empfehlung zur Dienstunfähigkeit. Ich habe zu jedem Punkt notiert, warum ich ihn
     vorschlage — und was passiert, wenn Du ihn nicht umsetzt.</p>
   <p class="bb__sg">Tobias Rieken</p>
-  <div class="bb__f">
-    <span>Tobias Rieken · Türkstraße 2 · 30167 Hannover</span>
-    <span>§ 34d Abs. 1 GewO · D-SSZS-O2N97-97</span>
-  </div>
-  <div class="bb__band"><img src="../assets/art/band-light.svg" alt=""></div>
+  <div class="bb__f"><span>Tobias Rieken · Türkstraße 2 · 30167 Hannover</span>
+    <span>§ 34d Abs. 1 GewO · D-SSZS-O2N97-97</span></div>
+  <div class="bb__bar"></div>
 </div>
 
-<!-- E-Mail-Signatur -->
 <div class="sg" id="sg">
-  <div class="sg__l"><img src="../assets/logo/signet-fine-tanne.svg" alt=""></div>
+  <img src="../assets/logo/signet-a-seal.svg" alt="">
+  <div class="bar"></div>
   <div>
     <b>Tobias Rieken</b>
     <p class="rl">Versicherungsmakler &amp; Finanzplaner</p>
     <p class="ct">+49 176 84330319 · info@trieken.com<br>Türkstraße 2, 30167 Hannover · finanzberatung-rieken.com</p>
-    <p class="rg">Erlaubnis nach § 34d Abs. 1 GewO · Vermittlerregister D-SSZS-O2N97-97</p>
+    <p class="rg">Erlaubnis nach § 34d Abs. 1 GewO · Register D-SSZS-O2N97-97</p>
   </div>
 </div>
 
-<!-- Avatar -->
-<div class="av" id="av"><img src="../assets/logo/signet-fine-invers.svg" alt=""></div>
+<div class="av" id="av"><img src="../assets/logo/signet-a-seal-invers.svg" alt=""></div>
+<div class="st" id="st"><img src="../assets/logo/signet-b-coin.svg" alt=""></div>
 
-<!-- Siegel -->
-<div class="st" id="st">
-  <div class="st__in">
-    <img src="../assets/art/seal.svg" alt="">
-    <div class="st__tx"><b>Rieken</b>Geprüft · Hannover</div>
-  </div>
-</div>
-
-<!-- Farbwelt -->
 <div class="pal" id="pal">
-  <div class="sw"><i style="background:#F2EDE4"></i><div><b>Papier</b><span>#F2EDE4</span></div></div>
-  <div class="sw"><i style="background:#E9E2D5"></i><div><b>Papier tief</b><span>#E9E2D5</span></div></div>
-  <div class="sw"><i style="background:#14332C"></i><div><b>Tanne</b><span>#14332C</span></div></div>
-  <div class="sw"><i style="background:#0C201C"></i><div><b>Tanne tief</b><span>#0C201C</span></div></div>
-  <div class="sw"><i style="background:#A9722A"></i><div><b>Messing</b><span>#A9722A</span></div></div>
-  <div class="sw"><i style="background:#14171A"></i><div><b>Tinte</b><span>#14171A</span></div></div>
+  <div class="sw"><i style="background:#0B2039"></i><div><b>Nachtblau</b><span>#0B2039</span></div></div>
+  <div class="sw"><i style="background:#153860"></i><div><b>Tiefblau</b><span>#153860</span></div></div>
+  <div class="sw"><i style="background:#2C6BB8"></i><div><b>Signalblau</b><span>#2C6BB8</span></div></div>
+  <div class="sw"><i style="background:#EEF5FC"></i><div><b>Lichtblau</b><span>#EEF5FC</span></div></div>
+  <div class="sw"><i style="background:#F8F2E8"></i><div><b>Creme</b><span>#F8F2E8</span></div></div>
+  <div class="sw"><i style="background:#C4A05C"></i><div><b>Gold</b><span>#C4A05C</span></div></div>
+  <div class="sw"><i style="background:#14202E"></i><div><b>Tinte</b><span>#14202E</span></div></div>
 </div>
 
-<!-- Schrift -->
 <div class="ty" id="ty">
   <div class="ty__r">
-    <div class="ty__k"><b>Newsreader</b><span>Auszeichnung</span></div>
-    <div class="spec-d">Ein Ansprechpartner für alles, was Dich absichert.</div>
+    <div class="ty__k"><b>Playfair Display</b><span>Auszeichnung</span></div>
+    <div class="spec-d">Endlich verstehen, wogegen Du wirklich abgesichert bist.</div>
   </div>
   <div class="ty__r">
-    <div class="ty__k"><b>Archivo</b><span>Lesetext &amp; Bedienung</span></div>
-    <div class="spec-s">Beratung für Beamte und private Haushalte. Digital, nachvollziehbar
-      und ohne Druck — von Hannover aus.</div>
+    <div class="ty__k"><b>Inter</b><span>Lesetext &amp; Bedienung</span></div>
+    <div class="spec-s">Ich sortiere Deine Verträge, erkläre jeden Punkt in normalem Deutsch und
+      schließe nur die Lücken, die Dich wirklich betreffen.</div>
   </div>
   <div class="ty__r">
-    <div class="ty__k"><b>IBM Plex Mono</b><span>Register &amp; Zahlen</span></div>
-    <div class="spec-m">§ 34d Abs. 1 GewO · D-SSZS-O2N97-97 · 5,00 / 5,00</div>
+    <div class="ty__k"><b>Inter · gesperrt</b><span>Beschriftung</span></div>
+    <div class="spec-l">Unabhängiger Versicherungsmakler · Hannover</div>
   </div>
 </div>
 
-<!-- Signet-Fassungen -->
 <div class="sgs" id="sgs">
-  <div class="sgs__c"><img src="../assets/logo/signet-fine-tanne.svg" alt=""><p class="lbl">Fein · Primär</p></div>
-  <div class="sgs__c dark"><img src="../assets/logo/signet-fine-invers.svg" alt=""><p class="lbl">Invers</p></div>
-  <div class="sgs__c"><img src="../assets/logo/signet-fine-messing.svg" alt=""><p class="lbl">Messing</p></div>
-  <div class="sgs__c"><img src="../assets/logo/signet-solid-tanne.svg" alt=""><p class="lbl">Kompakt · ab 16 px</p></div>
+  <div class="sgs__c"><img src="../assets/logo/signet-a-seal.svg" alt=""><p class="lbl">A · Siegel · Primär</p></div>
+  <div class="sgs__c dark"><img src="../assets/logo/signet-a-seal-invers.svg" alt=""><p class="lbl">A · Invers</p></div>
+  <div class="sgs__c"><img src="../assets/logo/signet-b-coin.svg" alt=""><p class="lbl">B · Münze · kompakt</p></div>
+  <div class="sgs__c"><img src="../assets/logo/signet-c-arc.svg" alt=""><p class="lbl">C · ohne Fassung</p></div>
   <div class="sgs__c">
-    <img class="sm" src="../assets/logo/signet-solid-tanne.svg" alt="">
-    <img class="sm" src="../assets/logo/signet-fine-mono.svg" alt="">
-    <p class="lbl">Favicon · Einfarbig</p>
+    <div class="row"><img src="../assets/logo/signet-b-coin.svg" alt=""><img class="xs" src="../assets/logo/signet-b-coin.svg" alt=""></div>
+    <p class="lbl">Favicon · ab 16 px</p>
   </div>
 </div>
 

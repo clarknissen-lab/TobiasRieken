@@ -1,72 +1,77 @@
 #!/usr/bin/env python3
 """
-Novera Studio - Signet-Generator fuer Finanzberatung Rieken.
-
-Bildmarke: eine 12-zaehlige Guilloche-Rosette. Die Guilloche ist das
-Sicherheitsmuster auf Policen, Urkunden und Wertpapieren - also genau auf
-den Dokumenten, mit denen diese Marke arbeitet. Damit ist das Signet
-inhaltlich begruendet und nicht dekorativ.
+Finanzberatung Rieken — Signet-Entwuerfe.
+Monogramm TR. Motiv: die Praegung — Muenze, Siegel, Urkunde.
+Rund, ruhig, warm. Kein Schild, kein Schloss: Absicherung soll
+willkommen wirken, nicht wie eine Alarmanlage.
 """
-import math, os
+import base64, os
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "logo")
 os.makedirs(OUT, exist_ok=True)
 
-def f(v): return f"{v:.2f}".rstrip('0').rstrip('.')
+FONT = "Playfair, Georgia, serif"
 
-def rose_ring(cx, cy, radius, amp, k, phase, steps=720):
-    pts = []
-    for i in range(steps + 1):
-        th = i / steps * 2 * math.pi
-        r = radius + amp * math.cos(k * th + phase)
-        pts.append((cx + r * math.cos(th), cy + r * math.sin(th)))
-    return "M" + " L".join(f"{f(x)},{f(y)}" for x, y in pts) + " Z"
+# Die Schrift wird in jede Datei eingebettet. Ohne das greift ein SVG,
+# das ueber <img> geladen wird, auf eine Systemschrift zurueck.
+_woff = os.path.join(os.path.dirname(__file__), "..", "assets", "fonts",
+                     "playfair-display-latin-wght-normal.woff2")
+_b64 = base64.b64encode(open(_woff, "rb").read()).decode()
+FONTDEF = ("<defs><style>@font-face{font-family:'Playfair';font-weight:400 900;"
+           "src:url(data:font/woff2;base64," + _b64 + ") format('woff2-variations');}"
+           "</style></defs>")
 
-def signet_fine(size=200, color="#14332C", core="#A9722A", rings=9,
-                k=12, fname="signet-fine.svg", stroke=1.15):
+def seal(fname, ring="#0D2440", ink="#0D2440", gold="#C4A05C", bg=None, size=200):
+    """Entwurf A — Praegung. Doppelring, Monogramm, zwei feine Punkte."""
     c = size / 2
-    R = size * 0.435
-    body = []
-    for i in range(rings):
-        t = i / (rings - 1)
-        rad = R * (1 - 0.46 * t)
-        amp = R * 0.115 * (1 - 0.35 * t)
-        ph = t * math.pi / k * 1.9
-        op = 0.95 - 0.32 * t
-        body.append(f'<path d="{rose_ring(c, c, rad, amp, k, ph)}" fill="none" '
-                    f'stroke="{color}" stroke-width="{f(stroke)}" stroke-opacity="{op:.2f}"/>')
-    body.append(f'<circle cx="{f(c)}" cy="{f(c)}" r="{f(size*0.052)}" fill="{core}"/>')
-    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}" '
-           f'width="{size}" height="{size}" role="img" aria-label="Signet Finanzberatung Rieken">'
-           + "".join(body) + "</svg>")
+    back = f'<circle cx="{c}" cy="{c}" r="{c}" fill="{bg}"/>' if bg else ''
+    return _write(fname, f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}"
+ width="{size}" height="{size}" role="img" aria-label="Tobias Rieken Finanzberatung">{FONTDEF}
+{back}
+  <circle cx="{c}" cy="{c}" r="{c*0.955}" fill="none" stroke="{ring}" stroke-width="{size*0.014}"/>
+  <circle cx="{c}" cy="{c}" r="{c*0.845}" fill="none" stroke="{gold}" stroke-width="{size*0.0055}"/>
+  <text x="{c}" y="{c}" fill="{ink}" font-family="{FONT}" font-weight="500"
+        font-size="{size*0.42}" letter-spacing="{size*0.012}"
+        text-anchor="middle" dominant-baseline="central">TR</text>
+  <circle cx="{c}" cy="{c*0.145}" r="{size*0.017}" fill="{gold}"/>
+  <circle cx="{c}" cy="{size - c*0.145}" r="{size*0.017}" fill="{gold}"/>
+</svg>''')
+
+def coin(fname, ink="#0D2440", gold="#C4A05C", size=200):
+    """Entwurf B — Muenze im Anschnitt. Voll gepraegt, greift sehr klein."""
+    c = size / 2
+    return _write(fname, f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}"
+ width="{size}" height="{size}" role="img" aria-label="Tobias Rieken Finanzberatung">{FONTDEF}
+  <circle cx="{c}" cy="{c}" r="{c}" fill="{ink}"/>
+  <circle cx="{c}" cy="{c}" r="{c*0.86}" fill="none" stroke="{gold}" stroke-width="{size*0.007}" opacity=".85"/>
+  <text x="{c}" y="{c}" fill="#FBF8F3" font-family="{FONT}" font-weight="500"
+        font-size="{size*0.42}" letter-spacing="{size*0.012}"
+        text-anchor="middle" dominant-baseline="central">TR</text>
+</svg>''')
+
+def arc(fname, ink="#0D2440", gold="#C4A05C", size=200):
+    """Entwurf C — ohne Fassung. Monogramm mit steigender Linie darunter:
+       Absicherung heute, Aufbau morgen. Modern, ohne Rahmen."""
+    c = size / 2
+    return _write(fname, f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}"
+ width="{size}" height="{size}" role="img" aria-label="Tobias Rieken Finanzberatung">{FONTDEF}
+  <text x="{c}" y="{c*0.90}" fill="{ink}" font-family="{FONT}" font-weight="500"
+        font-size="{size*0.50}" letter-spacing="{size*0.012}"
+        text-anchor="middle" dominant-baseline="central">TR</text>
+  <path d="M {c*0.20} {size*0.775} L {c*0.80} {size*0.700} L {c*1.20} {size*0.740} L {size-c*0.20} {size*0.600}"
+        fill="none" stroke="{gold}" stroke-width="{size*0.024}" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M {c*0.20} {size*0.855} H {size-c*0.20}" stroke="{ink}" stroke-width="{size*0.008}" stroke-linecap="round" opacity=".28"/>
+</svg>''')
+
+def _write(fname, svg):
     open(os.path.join(OUT, fname), "w").write(svg)
     return fname
 
-def signet_solid(size=200, color="#14332C", core="#F2EDE4", k=12,
-                 fname="signet-solid.svg"):
-    """Kompaktfassung: greift ab 16 px noch, fuer Favicon, Stempel, Social."""
-    c = size / 2
-    R = size * 0.415
-    outer = rose_ring(c, c, R * 0.94, R * 0.115, k, 0)
-    inner = rose_ring(c, c, R * 0.50, R * 0.062, k, 0)
-    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}" '
-           f'width="{size}" height="{size}" role="img" aria-label="Signet Finanzberatung Rieken">'
-           f'<path d="{outer}" fill="{color}"/>'
-           f'<path d="{inner}" fill="{core}"/>'
-           f'<circle cx="{f(c)}" cy="{f(c)}" r="{f(size*0.105)}" fill="{color}"/>'
-           f'</svg>')
-    open(os.path.join(OUT, fname), "w").write(svg)
-    return fname
-
-made = []
-# Primaerfassung
-made.append(signet_fine(color="#14332C", core="#A9722A", fname="signet-fine-tanne.svg"))
-made.append(signet_solid(color="#14332C", core="#F2EDE4", fname="signet-solid-tanne.svg"))
-# Invers (auf dunklem Grund)
-made.append(signet_fine(color="#E8DFCD", core="#C89551", fname="signet-fine-invers.svg"))
-made.append(signet_solid(color="#E8DFCD", core="#14332C", fname="signet-solid-invers.svg"))
-# Messing
-made.append(signet_fine(color="#A9722A", core="#14332C", fname="signet-fine-messing.svg"))
-# Einfarbig schwarz (Fax, Stempel, Presse)
-made.append(signet_fine(color="#14171A", core="#14171A", fname="signet-fine-mono.svg"))
-made.append(signet_solid(color="#14171A", core="#FFFFFF", fname="signet-solid-mono.svg"))
+made = [
+    seal("signet-a-seal.svg"),
+    seal("signet-a-seal-invers.svg", ring="#F1E6D2", ink="#FBF8F3", gold="#D9B979"),
+    coin("signet-b-coin.svg"),
+    coin("signet-b-coin-invers.svg", ink="#F1E6D2", gold="#0D2440"),
+    arc("signet-c-arc.svg"),
+    arc("signet-c-arc-invers.svg", ink="#F1E6D2", gold="#D9B979"),
+]
 print("\n".join(made))

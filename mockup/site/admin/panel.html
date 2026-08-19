@@ -4,50 +4,58 @@
 <title>Übersicht — Redaktion Finanzberatung Rieken</title>
 <link rel="stylesheet" href="admin.css">
 </head><body>
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h4M8.5 13h7M8.5 17h5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.4-5.8-3-5.8 3 1.1-6.4L2.6 9.4l6.5-.9z"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m4.5 17 4.8-4.3L14 17l2.6-2.2 3 2.6"/></symbol>
+  <symbol id="i-cog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.2M12 18.8V21M4.6 7.5l1.9 1.1M17.5 15.4l1.9 1.1M4.6 16.5l1.9-1.1M17.5 8.6l1.9-1.1"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M4 9h16M4 9l-2 5a3 3 0 0 0 6 0zM20 9l2 5a3 3 0 0 1-6 0z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol>
+</svg>
 <div class="app">
 
   <aside class="side">
-    <img class="side__art" src="../../assets/art/rosette-light.svg" alt="" aria-hidden="true">
+    <div class="side__glow"></div>
     <div class="side__brand">
-      <span class="brandmark">
-        <img src="../../assets/logo/signet-fine-invers.svg" alt="">
-        <span><b>Rieken</b><span>Redaktion</span></span>
-      </span>
+      <div class="brand">
+        <img src="../../assets/logo/signet-a-seal-invers.svg" alt="">
+        <span><b>Tobias Rieken</b><span>Redaktion</span></span>
+      </div>
     </div>
 
-    <h5 class="label">Tagesgeschäft</h5>
+    <h5 class="lbl">Webseite</h5>
     <nav>
-      <a class="is-on" href="#">Übersicht</a>
-      <a href="#">Termine<span class="cnt">7</span></a>
-      <a href="#">Anfragen<span class="cnt">4</span></a>
-      <a href="#">Bewertungen</a>
+      <a class="is-on" href="#"><svg><use href="#i-grid"/></svg>Übersicht</a>
+      <a href="#"><svg><use href="#i-doc"/></svg>Seiteninhalte</a>
+      <a href="#"><svg><use href="#i-list"/></svg>Leistungen</a>
+      <a href="#"><svg><use href="#i-star"/></svg>Bewertungen</a>
+      <a href="#"><svg><use href="#i-img"/></svg>Bilder</a>
     </nav>
 
-    <h5 class="label">Webseite</h5>
+    <h5 class="lbl">Konto</h5>
     <nav>
-      <a href="#">Seiteninhalte</a>
-      <a href="#">Leistungen</a>
-      <a href="#">Verfügbarkeiten</a>
-      <a href="#">Medien</a>
-    </nav>
-
-    <h5 class="label">Konto</h5>
-    <nav>
-      <a href="#">Einstellungen</a>
-      <a href="#">Rechtstexte</a>
+      <a href="#"><svg><use href="#i-cog"/></svg>Einstellungen</a>
+      <a href="#"><svg><use href="#i-scale"/></svg>Rechtstexte</a>
     </nav>
 
     <div class="side__foot">
       <img src="../../assets/novera/emblem.svg" alt="">
-      <span>Gepflegt von Novera Studio</span>
+      <span>Betreut von Novera Studio</span>
     </div>
   </aside>
 
   <div class="main">
     <div class="topbar">
-      <span class="search">Suchen — Kunde, Termin, Vertrag …</span>
+      <span class="search"><svg><use href="#i-search"/></svg>Inhalt suchen …</span>
       <div class="topbar__act">
-        <span class="label">Di, 16. September</span>
+        <span class="lbl">Dienstag, 16. September</span>
         <span class="avatar">TR</span>
       </div>
     </div>
@@ -55,86 +63,97 @@
     <div class="content">
       <div class="pagehead">
         <div>
-          <p class="label">Redaktion · Übersicht</p>
+          <p class="lbl">Redaktion · Übersicht</p>
           <h1>Guten Morgen, Tobias.</h1>
         </div>
-        <div style="display:flex;gap:12px">
-          <a class="btnsm btnsm--ghost" href="#"><span>Vorschau</span></a>
-          <a class="btnsm" href="#"><span>Zeiten freigeben</span><span>→</span></a>
+        <div class="pagehead__act">
+          <a class="btn btn--ghost btn--sm" href="../index.html"><svg><use href="#i-eye"/></svg>Seite ansehen</a>
+          <a class="btn btn--primary btn--sm" href="#"><svg><use href="#i-doc"/></svg>Inhalt bearbeiten</a>
         </div>
       </div>
 
       <div class="kpis">
-        <div class="kpi"><b>4</b><p class="label">Neue Anfragen</p></div>
-        <div class="kpi"><b>7</b><p class="label">Termine diese Woche</p></div>
-        <div class="kpi"><b>2</b><p class="label">Offene Rückrufe</p></div>
-        <div class="kpi"><b>5,00</b><p class="label">Bewertung · 12 Stimmen</p></div>
+        <div class="kpi">
+          <div class="kpi__ico"><svg><use href="#i-eye"/></svg></div>
+          <b>1.284</b><p>Seitenaufrufe, letzte 30 Tage</p>
+        </div>
+        <div class="kpi">
+          <div class="kpi__ico"><svg><use href="#i-cal"/></svg></div>
+          <b>23</b><p>Klicks auf „Termin buchen“</p>
+        </div>
+        <div class="kpi is-gold">
+          <div class="kpi__ico"><svg><use href="#i-star"/></svg></div>
+          <b>5,00</b><p>Bewertung · 12 Stimmen</p>
+        </div>
+        <div class="kpi">
+          <div class="kpi__ico"><svg><use href="#i-doc"/></svg></div>
+          <b>8</b><p>Abschnitte auf der Seite</p>
+        </div>
       </div>
 
-      <div style="display:grid;gap:0">
-      <section class="card">
-        <div class="card__h">
-          <h3>Nächste Termine</h3>
-          <span class="label">Kalenderwoche 38</span>
-        </div>
-        <div class="trow th"><span>Termin</span><span>Kunde</span><span>Anliegen</span><span>Kanal</span><span>Status</span></div>
-        <div class="trow">
-          <span class="d">Di 16. · 10:00</span><span class="n">M. Ahrends</span>
-          <span class="s">Dienstunfähigkeit prüfen</span><span class="d">Video</span>
-          <span class="pill p-ok">Bestätigt</span>
-        </div>
-        <div class="trow">
-          <span class="d">Di 16. · 14:15</span><span class="n">Familie Petrow</span>
-          <span class="s">Vertragscheck, 9 Policen</span><span class="d">Büro</span>
-          <span class="pill p-ok">Bestätigt</span>
-        </div>
-        <div class="trow">
-          <span class="d">Mi 17. · 09:15</span><span class="n">L. Brinkmann</span>
-          <span class="s">Beihilfe &amp; Restkosten</span><span class="d">Video</span>
-          <span class="pill p-new">Neu</span>
-        </div>
-        <div class="trow">
-          <span class="d">Do 18. · 16:00</span><span class="n">S. Okonkwo</span>
-          <span class="s">Baufinanzierung, Erstgespräch</span><span class="d">Video</span>
-          <span class="pill p-wait">Offen</span>
-        </div>
-        <div class="trow">
-          <span class="d">Fr 19. · 11:30</span><span class="n">T. Hauschild</span>
-          <span class="s">Anwärter, Einstiegstarif</span><span class="d">Büro</span>
-          <span class="pill p-ok">Bestätigt</span>
-        </div>
-      </section>
+      <div class="grid2">
 
-      <section class="card edit" style="margin-top:24px">
-        <div class="card__h"><h3>Zuletzt geändert</h3><span class="label">Verlauf</span></div>
-        <div class="edit__row"><span>Verfügbare Zeiten — KW 38 erweitert</span><span class="label">Heute, 08:12</span></div>
-        <div class="edit__row"><span>Leistung „Baufinanzierung“ — Text angepasst</span><span class="label">Gestern, 17:40</span></div>
-        <div class="edit__row"><span>Bewertung von ProvenExpert übernommen</span><span class="label">12.09., 09:05</span></div>
-      </section>
-    </div>
-    <div style="display:grid;gap:24px">
         <section class="card">
-          <div class="card__h"><h3>Anfragen</h3><span class="label">4 neu</span></div>
-          <div class="req"><span class="dot"></span><div>
-            <b>Merle A.</b><p>„Meine DU-Klausel — passt der Tarif noch?“</p><time>Vor 22 Minuten · Formular</time>
-          </div></div>
-          <div class="req"><span class="dot"></span><div>
-            <b>Jonas K.</b><p>Rückruf gewünscht, Referendariat ab Oktober</p><time>Vor 1 Stunde · Telefon</time>
-          </div></div>
-          <div class="req"><span class="dot is-read"></span><div>
-            <b>Familie Petrow</b><p>Unterlagen hochgeladen — 9 Policen</p><time>Gestern · Upload</time>
-          </div></div>
+          <div class="card__h">
+            <h3>Seiteninhalte</h3>
+            <span class="lbl">Alles live</span>
+          </div>
+          <div class="row">
+            <div class="row__l"><span class="row__ic"><svg><use href="#i-doc"/></svg></span>
+              <span><b>Auftakt — Überschrift und Einleitung</b><span>Zuletzt geändert heute, 08:12</span></span></div>
+            <span class="pill p-live">Live</span>
+          </div>
+          <div class="row">
+            <div class="row__l"><span class="row__ic"><svg><use href="#i-list"/></svg></span>
+              <span><b>Leistungen — 6 Einträge</b><span>Zuletzt geändert gestern, 17:40</span></span></div>
+            <span class="pill p-live">Live</span>
+          </div>
+          <div class="row">
+            <div class="row__l"><span class="row__ic"><svg><use href="#i-scale"/></svg></span>
+              <span><b>Für Beamte — Beihilfelücke</b><span>Zahlen und Erklärtext</span></span></div>
+            <span class="pill p-live">Live</span>
+          </div>
+          <div class="row">
+            <div class="row__l"><span class="row__ic"><svg><use href="#i-doc"/></svg></span>
+              <span><b>Über mich — neuer Absatz</b><span>Entwurf, noch nicht veröffentlicht</span></span></div>
+            <span class="pill p-draft">Entwurf</span>
+          </div>
+          <div class="row">
+            <div class="row__l"><span class="row__ic"><svg><use href="#i-star"/></svg></span>
+              <span><b>Bewertungen von ProvenExpert</b><span>Wird automatisch übernommen</span></span></div>
+            <span class="pill p-sync">Automatisch</span>
+          </div>
+          <div class="row">
+            <div class="row__l"><span class="row__ic"><svg><use href="#i-img"/></svg></span>
+              <span><b>Portraitfoto</b><span>Platzhalter — Foto steht noch aus</span></span></div>
+            <span class="pill p-draft">Offen</span>
+          </div>
         </section>
 
-        <section class="card edit">
-          <div class="card__h"><h3>Schnell ändern</h3><span class="label">Live</span></div>
-          <div class="edit__row"><span>Auftakt — Überschrift</span><span class="label">Bearbeiten</span></div>
-          <div class="edit__row"><span>Leistungen — 6 Einträge</span><span class="label">Bearbeiten</span></div>
-          <div class="edit__row"><span>Verfügbare Zeiten</span><span class="label">Bearbeiten</span></div>
-          <div class="edit__row"><span>Bewertungen — ProvenExpert</span><span class="label">Synchron</span></div>
-        </section>
+        <div style="display:grid;gap:22px">
+          <!-- Terminvergabe liegt bewusst bei Calendly: ein Kalender, den Tobias
+               ohnehin schon pflegt. Hier nur der kurze Weg dorthin. -->
+          <div class="cal">
+            <div class="cal__glow"></div>
+            <h3>Termine</h3>
+            <p>Deine Termine laufen über Calendly. Der Knopf auf der Webseite führt direkt dorthin.</p>
+            <ul class="cal__list">
+              <li><b>Erstgespräch, 30 Min</b><span>aktiv</span></li>
+              <li><b>Video und Büro Hannover</b><span>aktiv</span></li>
+            </ul>
+            <a class="btn btn--gold btn--block" href="https://calendly.com/" target="_blank" rel="noopener">
+              Calendly öffnen <svg><use href="#i-ext"/></svg></a>
+          </div>
+
+          <section class="card">
+            <div class="card__h"><h3>Zuletzt geändert</h3><span class="lbl">Verlauf</span></div>
+            <div class="row"><div class="row__l"><span><b>Leistung „Baufinanzierung“</b><span>Text angepasst</span></span></div><span class="lbl">Gestern</span></div>
+            <div class="row"><div class="row__l"><span><b>Beihilfelücke</b><span>Rechenbeispiel ergänzt</span></span></div><span class="lbl">12.09.</span></div>
+            <div class="row"><div class="row__l"><span><b>Bewertung übernommen</b><span>ProvenExpert</span></span></div><span class="lbl">08.09.</span></div>
+          </section>
+        </div>
+
       </div>
-
     </div>
   </div>
 </div>
