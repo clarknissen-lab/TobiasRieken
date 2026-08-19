@@ -89,7 +89,7 @@ ul{margin:0;padding:0;list-style:none}
 
 /* Seitenfahne — die ganze Seite auf einen Blick */
 .flag{display:flex;gap:26px;align-items:flex-start}
-.flag__c{width:330px;height:565px;background-repeat:no-repeat;background-size:330px 1695px;
+.flag__c{width:330px;height:658px;background-repeat:no-repeat;background-size:330px 1975px;
   border:1px solid var(--nv-line);box-shadow:0 26px 54px -40px rgba(14,16,19,.6)}
 .flag__l{width:330px;margin-top:12px}
 

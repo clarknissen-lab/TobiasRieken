@@ -52,6 +52,10 @@ await page.addStyleTag({ content: `
   .split__p{transition:none !important}
   .nav{display:none !important}
 ` + CSS });
+await page.evaluate(() => {
+  const s = document.querySelector('.split');
+  if (s) s.classList.remove('is-collapsed');
+});
 await page.waitForTimeout(500);
 
 for (const [name, cfg] of Object.entries(PINS)) {

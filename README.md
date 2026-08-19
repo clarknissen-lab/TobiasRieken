@@ -4,7 +4,7 @@ Entwurf von **Novera Studio** für Tobias Rieken, Versicherungsmakler in Hannove
 Onepager, Marke und Redaktionsbereich.
 
 **Ergebnis:** [`Novera-Studio_Webkonzept_Finanzberatung-Rieken.pdf`](Novera-Studio_Webkonzept_Finanzberatung-Rieken.pdf)
-— 23 Seiten, 16:9, bildgeführt.
+— 24 Seiten, 16:9, bildgeführt.
 
 ---
 
@@ -20,11 +20,20 @@ hier liest, soll sich gut aufgehoben fühlen — nicht wie in einer Bankfiliale.
 | **Creme** | `#FDFBF7` · `#F8F2E8` |
 | **Gold** | `#C4A05C` |
 | **Tinte** | `#14202E` |
-| **Schrift** | Playfair Display (Auszeichnung) · Inter (Lesetext und Beschriftung) — beide SIL OFL |
+| **Schrift** | Fraunces (Auszeichnung) · Inter (Lesetext und Beschriftung) — beide SIL OFL |
 
 Die Abschnitte wechseln bewusst zwischen warm, hell-kühl und dunkel. Der Blick
 bekommt Pausen, beim Scrollen wird es nicht langweilig, und die Übergänge
 trennen dezent statt hart.
+
+**Zur Helligkeit des Blaus:** Auftakt und Terminblock bleiben am tiefsten — dort
+sitzt die Eleganz. Der große Schwerpunkt-Abschnitt „Für Beamte“ ist bewusst
+heller (`#123156` mit Lichtverlauf), damit drei dunkle Blöcke die Seite nicht
+erdrücken. Das gibt zusätzlich Tiefenstaffelung, ohne eine neue Farbe zu brauchen.
+
+**Fraunces statt einer klassischen Didone:** weiche Ecken (`SOFT 45`), gerade
+Formen (`WONK 0`). Seriös genug für Finanzen, freundlich genug, dass sich
+niemand eingeschüchtert fühlt.
 
 ## Logo — Monogramm TR
 
@@ -53,6 +62,27 @@ Zwei Erklärgrafiken statt Zahlenkosmetik:
    statt Fachjargon.
 
 Beide sind als Beispiel gekennzeichnet.
+
+## Überzeugen statt behaupten
+
+Ein eigener Abschnitt **„Bevor Du fragst“** nimmt die Einwände vorweg, an denen
+Termine sonst scheitern:
+
+- Die **Kostenfrage** steht ganz oben und wird offen beantwortet — inklusive
+  der Vergütung über die Gesellschaft. Das ist der häufigste Grund, warum jemand
+  doch nicht bucht.
+- Darunter **sechs Fragen**, die im Erstgespräch ohnehin kommen: Unterlagen,
+  Verpflichtung, Online-Termin, bestehender Berater, Unterschied zum Vertreter,
+  Wartezeit.
+- Dazu drei Zusagen direkt unter dem Auftakt: kein Verkauf im ersten Termin,
+  schriftliche Empfehlung, für Dich kostenlos.
+
+## Am Telefon liest niemand Blöcke
+
+Auf Mobil bekommt jeder Einleitungstext eine goldene Kante und wird kleiner — er
+liest sich dann als Zwischenruf, nicht als Absatz. Knöpfe stehen untereinander
+statt gequetscht nebeneinander, Karten sind deutlich getrennt, die Texte selbst
+sind durchgehend gekürzt.
 
 ## Termine laufen über Calendly
 

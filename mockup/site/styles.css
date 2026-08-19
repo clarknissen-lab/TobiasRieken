@@ -13,8 +13,9 @@
 /* --- 1 · Marke ----------------------------------------------------------- */
 :root{
   /* Blau — Vertrauen */
-  --navy-900:#0B2039;
-  --navy-800:#0D2440;
+  --navy-900:#0A1E36;   /* Auftakt und Termin — die tiefsten Anker */
+  --navy-800:#123156;   /* Schwerpunkt Beamte — bewusst heller, damit drei
+                           dunkle Blöcke die Seite nicht erdrücken */
   --navy-700:#153860;
   --navy-600:#1E4E85;
   --blue-500:#2C6BB8;
@@ -48,7 +49,7 @@
   --line-navy:rgba(234,241,249,.16);
 
   /* Schrift */
-  --display:'Playfair',Georgia,'Times New Roman',serif;
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
 
   /* Maße */
@@ -84,6 +85,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:3px solid var(--blue-400);outline-offset:3px;border-radius:4px}
 
 /* --- 3 · Typografie ------------------------------------------------------ */
+/* Fraunces weich und gerade eingestellt: SOFT rundet die Ecken, WONK bleibt
+   bei null, damit nichts verspielt wirkt. */
+.d1,.d2,.d3,.d4,.trust__v,.ba__row b,.split__p b,.step__n,.voice__q,.quote,
+.score__v,.kpi b,.faq__q b{font-variation-settings:"SOFT" 45,"WONK" 0,"opsz" 40}
 .d1{font-family:var(--display);font-weight:500;font-size:clamp(38px,5.3vw,72px);
   line-height:1.06;letter-spacing:-.022em}
 .d2{font-family:var(--display);font-weight:500;font-size:clamp(30px,3.5vw,50px);
@@ -114,7 +119,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sec--sm{padding-block:clamp(52px,5vw,78px)}
 .sec--cream{background:var(--cream-100)}
 .sec--blue{background:var(--blue-50)}
-.sec--navy{background:var(--navy-800);color:var(--on-navy)}
+.sec--navy{color:var(--on-navy);
+  background:radial-gradient(80% 70% at 84% 6%, rgba(74,138,212,.26), transparent 62%),
+             radial-gradient(60% 60% at 6% 98%, rgba(196,160,92,.13), transparent 64%),
+             linear-gradient(168deg,#153A63 0%,#123156 58%,#0F2A4A 100%)}
 .sec--navy .body,.sec--navy .lead,.sec--navy .small{color:var(--on-navy-soft)}
 
 /* Weiche Kante zwischen zwei Flächen — trennt, ohne zu schneiden */
@@ -211,6 +219,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
 .hero__note{display:flex;align-items:center;gap:9px;margin-top:22px;font-size:14px;color:var(--on-navy-soft)}
 .hero__note svg{width:16px;height:16px;color:var(--gold-300);flex:none}
+/* Drei Zusagen direkt unter dem Auftakt — sie nehmen die drei häufigsten
+   Bedenken vorweg, bevor sie überhaupt aufkommen. */
+.vows{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.vows li{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;
+  color:var(--on-navy);background:rgba(234,241,249,.08);border:1px solid var(--line-navy);
+  border-radius:99px;padding:9px 16px 9px 12px}
+.vows svg{width:15px;height:15px;color:var(--gold-300);flex:none}
 
 /* Beratungskarte im Auftakt — zeigt sofort, was passiert */
 .card-glass{
@@ -308,13 +323,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sec--navy .panel__h p{color:var(--on-navy-soft)}
 
 /* Balken: eine Zeile, große Prozente, sofort lesbar */
-.split{display:flex;height:88px;border-radius:14px;overflow:hidden;box-shadow:var(--sh-sm)}
+.split{display:flex;min-height:92px;border-radius:14px;overflow:hidden;box-shadow:var(--sh-sm)}
 .split__p{display:flex;flex-direction:column;justify-content:center;padding:0 22px;color:#fff;
   position:relative;transition:flex-basis .8s var(--ease)}
-.split__p b{font-family:var(--display);font-weight:600;font-size:33px;line-height:1}
-.split__p span{font-size:12.5px;font-weight:500;opacity:.86;margin-top:4px}
+.split__p b{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.1vw,33px);line-height:1.05}
+.split__p span{font-size:12.5px;font-weight:500;line-height:1.35;opacity:.88}
 .p-aid{background:linear-gradient(135deg,var(--navy-700),var(--navy-600))}
 .p-gap{background:linear-gradient(135deg,var(--gold-600),var(--gold-500))}
+.split.is-collapsed .split__p{flex-basis:0% !important}
 .legend{display:flex;flex-wrap:wrap;gap:22px;margin-top:20px}
 .legend li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--slate-500)}
 .sec--navy .legend li{color:var(--on-navy-soft)}
@@ -369,6 +385,37 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .step p{font-size:15px;line-height:1.62;color:var(--slate-500)}
 .step__meta{display:inline-block;margin-top:13px;font-size:12px;font-weight:600;letter-spacing:.05em;
   color:var(--blue-500);background:var(--blue-50);border-radius:99px;padding:6px 13px}
+
+/* --- 12b · Kosten und häufige Fragen ------------------------------------- */
+.cost{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:0;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--sh);margin-bottom:26px;
+}
+.cost__a{
+  padding:38px 40px;color:var(--on-navy);
+  background:radial-gradient(90% 80% at 85% 10%,rgba(74,138,212,.28),transparent 60%),
+             linear-gradient(155deg,#153A63,#0F2A4A);
+}
+.cost__a h3{color:#fff;margin-bottom:14px}
+.cost__a p{font-size:16px;line-height:1.7;color:var(--on-navy-soft)}
+.cost__a p + p{margin-top:12px}
+.cost__a b{color:#fff;font-weight:600}
+.cost__b{background:#fff;padding:34px 38px;display:flex;flex-direction:column;justify-content:center}
+.cost__row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cost__row:last-child{border-bottom:0}
+.cost__row svg{width:20px;height:20px;flex:none;color:#2F8F63}
+.cost__row b{font-size:15.5px;font-weight:600;display:block}
+.cost__row span{font-size:13.5px;color:var(--slate-500);display:block;margin-top:2px}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.faq__i{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;
+  box-shadow:var(--sh-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.faq__i:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.faq__q{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px}
+.faq__q i{width:24px;height:24px;flex:none;border-radius:8px;background:var(--gold-100);
+  color:var(--gold-600);display:grid;place-items:center;font-style:normal;font-weight:700;font-size:13px}
+.faq__q b{font-family:var(--display);font-weight:600;font-size:18px;line-height:1.3;letter-spacing:-.01em}
+.faq__i p{font-size:15px;line-height:1.65;color:var(--slate-500);padding-left:36px}
 
 /* --- 13 · Person --------------------------------------------------------- */
 .person{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,64px);align-items:center}
@@ -436,8 +483,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .contact__ic{width:40px;height:40px;border-radius:11px;background:rgba(196,160,92,.16);color:var(--gold-300);
   display:grid;place-items:center;flex:none}
 .contact__ic svg{width:19px;height:19px}
-.contact b{display:block;font-size:16px;color:#fff;font-weight:500}
-.contact span{display:block;font-size:13px;color:var(--on-navy-soft);margin-top:2px}
+.contact__t{display:block;min-width:0}
+.contact__t b{display:block;font-size:16px;color:#fff;font-weight:500;line-height:1.35}
+.contact__t small{display:block;font-size:13px;color:var(--on-navy-soft);margin-top:3px;line-height:1.45}
 
 /* --- 16 · Fußzeile ------------------------------------------------------- */
 .foot{background:var(--navy-900);color:var(--on-navy);padding-block:clamp(48px,5vw,72px) 30px}
@@ -487,13 +535,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .nav__in{height:68px}
   .dock{display:flex}
 
-  .sec{padding-block:58px}
-  .sec--sm{padding-block:44px}
-  .head{margin-bottom:30px}
+  .sec{padding-block:56px}
+  .sec--sm{padding-block:40px}
+  .head{margin-bottom:28px}
+
+  /* Am Telefon liest niemand Blöcke. Der Einleitungstext bekommt eine
+     goldene Kante und wird kleiner — er liest sich dann als Zwischenruf,
+     nicht als Absatz. */
+  .lead,.hero__lead{
+    font-size:15.5px;line-height:1.6;
+    border-left:3px solid var(--gold-500);padding-left:14px;
+  }
+  .hero__lead{border-left-color:var(--gold-300);color:var(--on-navy-soft)}
+  .head--center{text-align:left}
+  .head--center .lead{margin-inline:0}
+  .lead + *{margin-top:22px}
+  .body,.small{font-size:15.5px;line-height:1.62}
+  .card p,.step p,.faq__i p{font-size:14.5px;line-height:1.6}
 
   .hero__in{padding-block:44px 52px}
-  .hero__cta{gap:11px}
-  .hero__cta .btn{flex:1;min-width:0}
+  /* Zwei Knöpfe nebeneinander schoben sich am Telefon ineinander. */
+  .hero__cta{flex-direction:column;align-items:stretch;gap:10px}
+  .hero__cta .btn{width:100%}
+  .book__cta{flex-direction:column;align-items:stretch;gap:10px}
+  .book__cta .btn{width:100%}
   .card-glass{padding:24px}
 
   .trust{grid-template-columns:repeat(2,1fr);gap:12px}
@@ -522,6 +587,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .step__n{margin:0}
   .step__b{grid-column:2}
 
+  .cost{grid-template-columns:1fr;margin-bottom:16px}
+  .cost__a{padding:26px 24px}
+  .cost__b{padding:20px 24px 24px}
+  .faq{grid-template-columns:1fr;gap:12px}
+  .faq__i{padding:20px 22px}
+  .faq__i p{padding-left:0;margin-top:4px}
+  .vows{gap:8px;margin-top:20px}
+  .vows li{font-size:12.5px;padding:8px 13px 8px 10px}
   .creds{grid-template-columns:1fr}
   .voice__card{padding:26px 24px}
   .voice__q{font-size:20px}

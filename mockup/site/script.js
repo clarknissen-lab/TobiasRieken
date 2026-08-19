@@ -28,7 +28,7 @@
   }
 
   /* 3 · Navigation zeigt den Abschnitt, in dem man gerade liest */
-  var ids = ['leistungen', 'beamte', 'ablauf', 'person'];
+  var ids = ['leistungen', 'beamte', 'ablauf', 'fragen', 'person'];
   var links = document.querySelectorAll('.nav__links a');
   var spy = new IntersectionObserver(function (rows) {
     rows.forEach(function (r) {
@@ -43,18 +43,21 @@
     if (el) spy.observe(el);
   });
 
-  /* 4 · Der Balken der Beihilfelücke waechst, wenn er ins Bild kommt */
+  /* 4 · Der Balken der Beihilfelücke waechst, wenn er ins Bild kommt.
+        Der zusammengeklappte Zustand haengt an einer Klasse, nicht an
+        Inline-Styles: faellt dieses Script aus, steht der Balken trotzdem
+        richtig statt zusammengeschoben und oben abgeschnitten. */
   var split = document.querySelector('.split');
-  if (split && !reduce) {
-    var parts = split.querySelectorAll('.split__p');
-    var basis = [];
-    parts.forEach(function (p) { basis.push(p.style.flexBasis); p.style.flexBasis = '0%'; });
+  if (split && !reduce && 'IntersectionObserver' in window) {
+    split.classList.add('is-collapsed');
     new IntersectionObserver(function (rows, obs) {
       rows.forEach(function (r) {
         if (!r.isIntersecting) return;
-        parts.forEach(function (p, i) { p.style.flexBasis = basis[i]; });
+        split.classList.remove('is-collapsed');
         obs.disconnect();
       });
-    }, { threshold: 0.4 }).observe(split);
+    }, { threshold: 0.35 }).observe(split);
   }
+
+  /* 5 · Navigation kennt jetzt auch den Abschnitt "Kosten & Fragen" */
 })();

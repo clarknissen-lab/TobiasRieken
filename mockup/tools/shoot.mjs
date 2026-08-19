@@ -15,14 +15,18 @@ async function prep(page) {
     .rise{opacity:1 !important;transform:none !important;transition:none !important}
     html{scroll-behavior:auto}
     .split__p{transition:none !important}
+    .split.is-collapsed .split__p{flex-basis:var(--fb) !important}
   `});
+  await page.evaluate(() => {
+    const s = document.querySelector('.split');
+    if (s) s.classList.remove('is-collapsed');
+  });
   await page.waitForTimeout(500);
 }
 
 /* ---- Desktop -------------------------------------------------------- */
 const d = await browser.newPage({ viewport: { width: 1600, height: 1000 }, deviceScaleFactor: scale });
 await prep(d);
-await d.screenshot({ path: `${OUT}/desktop-full.png`, fullPage: true });
 await d.screenshot({ path: `${OUT}/desktop-fold.png` });
 
 const cuts = {
@@ -32,6 +36,7 @@ const cuts = {
   'd-leistungen':  '#leistungen',
   'd-beamte':      '#beamte',
   'd-ablauf':      '#ablauf',
+  'd-fragen':      '#fragen',
   'd-person':      '#person',
   'd-stimme':      '.voice',
   'd-termin':      '#termin',
@@ -60,7 +65,6 @@ const m = await browser.newPage({
   viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true,
 });
 await prep(m);
-await m.screenshot({ path: `${OUT}/mobile-full.png`, fullPage: true });
 
 const mviews = [
   ['m-hero', 0, 0],
@@ -68,6 +72,7 @@ const mviews = [
   ['m-leistungen', '#leistungen', 50],
   ['m-beamte', '#beamte', 50],
   ['m-ablauf', '#ablauf', 50],
+  ['m-fragen', '#fragen', 50],
   ['m-person', '#person', -250],
   ['m-termin', '#termin', 50],
 ];
@@ -86,6 +91,15 @@ for (const [name, target, off] of mviews) {
 const mfull = await m.evaluate(() => document.body.scrollHeight);
 console.log('mobile full height', mfull);
 await m.close();
+
+/* Ganzseiten-Abzuege in einfacher Aufloesung — sie werden nur klein gezeigt. */
+for (const [w, h, mob, name] of [[1600, 1000, false, 'desktop-full'], [390, 844, true, 'mobile-full']]) {
+  const pg = await browser.newPage({ viewport: { width: w, height: h }, deviceScaleFactor: 1,
+    isMobile: mob, hasTouch: mob });
+  await prep(pg);
+  await pg.screenshot({ path: `${OUT}/${name}.png`, fullPage: true });
+  await pg.close();
+}
 
 await browser.close();
 console.log('shots:', fs.readdirSync(OUT).length);
