@@ -1,0 +1,180 @@
+{
+  "seite": {
+    "titel": "Finanzberatung Rieken — Versicherungsmakler in Hannover",
+    "beschreibung": "Tobias Rieken, unabhängiger Versicherungsmakler in Hannover. Absicherung für Beamte und private Haushalte — verständlich erklärt, ohne Druck. Kostenloses Erstgespräch.",
+    "name": "Tobias Rieken",
+    "zusatz": "Finanzberatung",
+    "calendly": "https://calendly.com/"
+  },
+  "auftakt": {
+    "vorzeile": "Unabhängiger Versicherungsmakler · Hannover",
+    "ueberschrift": "Endlich verstehen,|wogegen Du|*wirklich* abgesichert bist.",
+    "einleitung": "Ich sichte Deine Verträge, schließe die Lücken, die zählen, und streiche, was doppelt läuft. Für Beamte und private Haushalte — in Hannover und deutschlandweit per Video.",
+    "knopf_haupt": "Kostenloses Erstgespräch",
+    "knopf_zweit": "Leistungen ansehen",
+    "zusagen": [
+      "Kein Verkauf im ersten Termin",
+      "Schriftliche Empfehlung mit Begründung",
+      "Für Dich kostenlos"
+    ],
+    "karte": {
+      "titel": "Das Erstgespräch",
+      "unterzeile": "Kein Verkauf. Erst schauen, dann rechnen, dann entscheiden.",
+      "punkte": [
+        "Wir lernen uns kennen — ganz ohne Unterlagen",
+        "Wir schauen auf Deine laufenden Verträge",
+        "Du erfährst, was fehlt und was doppelt läuft",
+        "Du entscheidest in Ruhe. Oder gar nicht."
+      ],
+      "knopf": "Termin im Kalender wählen",
+      "fuss_links": "Antwort meist am selben Tag",
+      "fuss_rechts": "Kostenlos"
+    }
+  },
+  "vertrauen": [
+    { "wert": "5,00", "zusatz": " / 5,00", "text": "Bewertung bei ProvenExpert", "symbol": "i-star", "gold": true },
+    { "wert": "§ 34d", "zusatz": "", "text": "Zugelassen von der IHK, Abs. 1 GewO", "symbol": "i-badge", "gold": false },
+    { "wert": "Für Dich", "zusatz": "", "text": "Makler im Auftrag des Kunden — nicht der Versicherung", "symbol": "i-user", "gold": false },
+    { "wert": "Hannover", "zusatz": "", "text": "Vor Ort und deutschlandweit per Video", "symbol": "i-pin", "gold": false }
+  ],
+  "vergleich": {
+    "vorzeile": "Der Unterschied",
+    "ueberschrift": "Aus einem Stapel Papier|wird ein klarer Plan.",
+    "einleitung": "Ein typischer Vertragscheck — vorher und nachher.",
+    "marke_vorher": "Vorher",
+    "marke_nachher": "Nachher",
+    "zeilen": [
+      { "label": "Einzelne Verträge",     "vorher": "11",    "nachher": "6",     "marke": "−5",            "flach": false },
+      { "label": "Verschiedene Anbieter", "vorher": "5",     "nachher": "3",     "marke": "−2",            "flach": false },
+      { "label": "Ansprechpartner",       "vorher": "5",     "nachher": "1",     "marke": "nur noch einer", "flach": true },
+      { "label": "Beitrag im Monat",      "vorher": "312 €", "nachher": "248 €", "marke": "−64 €",         "flach": false },
+      { "label": "Echte Lücken",          "vorher": "3",     "nachher": "0",     "marke": "geschlossen",   "flach": false }
+    ],
+    "hinweis": "Beispiel aus der Praxis. Deine eigenen Zahlen bekommst Du nach dem Erstgespräch — schriftlich."
+  },
+  "leistungen": {
+    "vorzeile": "Leistungen",
+    "ueberschrift": "Ein Ansprechpartner für alles,|was Dich absichert.",
+    "einleitung": "Du musst nicht wissen, welcher Vertrag zuständig ist. Das ist mein Job.",
+    "eintraege": [
+      { "symbol": "i-shield",   "titel": "Absicherung für Beamte",     "text": "Dienstunfähigkeit, Beihilfe und PKV — abgestimmt auf Deinen Dienstherrn.",      "stichworte": "Dienstunfähigkeit, Beihilfe, Anwärter" },
+      { "symbol": "i-pulse",    "titel": "Einkommen & Gesundheit",     "text": "Was passiert, wenn Du drei Jahre nicht arbeiten kannst? Diese Frage zuerst.",   "stichworte": "Berufsunfähigkeit, Krankenversicherung, Unfall" },
+      { "symbol": "i-trend",    "titel": "Altersvorsorge & Vermögen",  "text": "Rentenlücke ausrechnen, Förderungen mitnehmen, Kosten offenlegen.",             "stichworte": "Rentenlücke, Förderung, Kosten" },
+      { "symbol": "i-home",     "titel": "Baufinanzierung",            "text": "Von der Kalkulation bis zur Anschlussfinanzierung — samt Absicherung.",         "stichworte": "Kalkulation, Zinsbindung, Anschluss" },
+      { "symbol": "i-umbrella", "titel": "Haftpflicht & Sachwerte",    "text": "Die unspektakulären Verträge, die im Ernstfall zählen. Richtig bemessen.",      "stichworte": "Privathaftpflicht, Hausrat, Rechtsschutz" },
+      { "symbol": "i-folder",   "titel": "Vertragscheck & Verwaltung", "text": "Policen sichten, bündeln, digital verfügbar machen. Du siehst, was läuft.",     "stichworte": "Bestandsübertragung, App, Schadenfall" }
+    ],
+    "abschluss_titel": "Nicht sicher, was davon Dich betrifft?",
+    "abschluss_text": "Genau dafür ist das Erstgespräch da. Wir gehen es gemeinsam durch — kostenlos und unverbindlich.",
+    "abschluss_knopf": "Termin buchen"
+  },
+  "beamte": {
+    "vorzeile": "Schwerpunkt",
+    "ueberschrift": "Beamte sind anders abgesichert.|Also berate ich sie auch anders.",
+    "einleitung": "Zwei Punkte, bei denen Standardtarife regelmäßig danebenliegen.",
+    "luecke": {
+      "titel": "Die Beihilfelücke",
+      "unterzeile": "Beispiel: Beamtin mit 70 % Beihilfe",
+      "anteil_beihilfe": "70",
+      "text_beihilfe": "zahlt Dein Dienstherr",
+      "text_rest": "zahlst Du selbst",
+      "legende_beihilfe": "Beihilfe des Dienstherrn",
+      "legende_rest": "Deine Lücke — dafür der Ergänzungstarif",
+      "klartext": "Im Klartext: Kostet eine Behandlung **1.000 €**, übernimmt der Dienstherr **700 €**. Die restlichen **300 €** zahlst Du — es sei denn, ein passender Ergänzungstarif springt ein."
+    },
+    "du": {
+      "titel": "Dienstunfähigkeit ist nicht Berufsunfähigkeit",
+      "unterzeile": "Der Unterschied entscheidet, ob gezahlt wird",
+      "gut_titel": "Mit echter DU-Klausel",
+      "gut": [
+        "Der Dienstherr versetzt Dich in den Ruhestand — die Versicherung zahlt",
+        "Keine eigene Nachprüfung durch den Versicherer",
+        "Gilt auch für Anwärter und Beamte auf Probe"
+      ],
+      "schlecht_titel": "Nur Standard-BU",
+      "schlecht": [
+        "Der Versicherer prüft selbst, ob Du arbeiten könntest",
+        "Die Pensionierung allein reicht oft nicht aus",
+        "Im Ernstfall streitet man über Formulierungen"
+      ],
+      "klartext": "Ich prüfe die **Klausel im Vertrag**, nicht den Werbetext auf dem Prospekt. Den Unterschied siehst Du erst, wenn es darauf ankommt."
+    }
+  },
+  "ablauf": {
+    "vorzeile": "So läuft es",
+    "ueberschrift": "In vier Schritten zum Überblick",
+    "einleitung": "Erst verstehen, dann rechnen, dann entscheiden. In dieser Reihenfolge.",
+    "schritte": [
+      { "titel": "Erstgespräch", "text": "Wir lernen uns kennen, sprechen über Deine Verträge und Finanzen und klären, was Du brauchst.", "marke": "30 Min · kostenlos" },
+      { "titel": "Analyse",      "text": "Ich sichte Deine Unterlagen und rechne durch, was fehlt, was doppelt läuft und was weg kann.",   "marke": "Du bereitest nichts vor" },
+      { "titel": "Vorschlag",    "text": "Du bekommst eine schriftliche Empfehlung — mit Begründung, Kosten und Alternativen. Ohne Termindruck.", "marke": "Zum Nachlesen" },
+      { "titel": "Umsetzung",    "text": "Ich übernehme Anträge und Kündigungen — und bleibe Dein Ansprechpartner, besonders im Schadenfall.", "marke": "Dauerhaft" }
+    ]
+  },
+  "fragen": {
+    "vorzeile": "Kosten & Fragen",
+    "ueberschrift": "Bevor Du fragst.",
+    "einleitung": "Die Punkte, die im Erstgespräch am häufigsten kommen — hier gleich beantwortet.",
+    "kosten_titel": "Was kostet Dich meine Beratung?",
+    "kosten_absatz1": "**Nichts extra.** Als Makler werde ich von der Gesellschaft vergütet, bei der ein Vertrag zustande kommt. Dein Beitrag ist derselbe — ob Du direkt abschließt oder über mich.",
+    "kosten_absatz2": "Was Du zusätzlich bekommst: jemanden, der die Bedingungen gelesen hat, der kündigt, wenn etwas nicht mehr passt, und der im Schadenfall für Dich anruft.",
+    "zusagen": [
+      { "titel": "Erstgespräch kostenlos", "text": "30 Minuten, ohne Verpflichtung" },
+      { "titel": "Kein Aufpreis",          "text": "Dein Beitrag bleibt derselbe" },
+      { "titel": "Keine Bindung an mich",  "text": "Du kannst jederzeit wechseln" },
+      { "titel": "Betreuung inklusive",    "text": "Auch Jahre nach dem Abschluss" }
+    ],
+    "eintraege": [
+      { "frage": "Muss ich Unterlagen mitbringen?",        "antwort": "Nein. Zum Kennenlernen brauchst Du gar nichts. Was ich später sehen sollte, sage ich Dir im Termin." },
+      { "frage": "Bin ich danach zu etwas verpflichtet?",  "antwort": "Nein. Du bekommst eine schriftliche Empfehlung und entscheidest in Ruhe. „Gar nicht“ ist auch eine Antwort." },
+      { "frage": "Geht das auch komplett online?",        "antwort": "Ja, deutschlandweit per Video. Wer lieber gegenübersitzt, kommt in die Türkstraße nach Hannover." },
+      { "frage": "Ich habe schon einen Berater.",          "antwort": "Dann lohnt sich der Vertragscheck erst recht. Eine Zweitmeinung kostet nichts und ändert nichts an bestehenden Verträgen." },
+      { "frage": "Was ist der Unterschied zum Vertreter?", "antwort": "Ein Vertreter arbeitet für eine Gesellschaft. Als Makler arbeite ich für Dich — und darf aus dem gesamten Markt auswählen." },
+      { "frage": "Wie schnell bekomme ich einen Termin?",  "antwort": "Meist innerhalb weniger Tage. Abendtermine nach Absprache." }
+    ],
+    "knopf": "Frage nicht dabei? Termin buchen"
+  },
+  "person": {
+    "rolle": "Versicherungsmakler & Finanzplaner",
+    "name": "Tobias Rieken",
+    "einleitung": "Willkommen bei Deinem persönlichen Versicherungsmakler. Ich stehe Dir jederzeit zur Verfügung, um Dich bei allen Fragen rund um Versicherungen und Finanzen zu unterstützen.",
+    "zitat": "Ich bin Dein digitaler Ansprechpartner, der Dir auch online immer zur Seite steht. Mit modernen Tools und digitalen Lösungen sorge ich dafür, dass Du immer den Überblick über Deine Absicherungen und Finanzen behältst.",
+    "bild_hinweis": "Portrait Tobias Rieken · Fotoproduktion vorgesehen",
+    "nachweise": [
+      { "label": "Zulassung",         "wert": "§ 34d Abs. 1 GewO" },
+      { "label": "Vermittlerregister","wert": "D-SSZS-O2N97-97" },
+      { "label": "Aufsicht",          "wert": "Industrie- und Handelskammer" },
+      { "label": "Büro",              "wert": "Türkstraße 2, Hannover" }
+    ]
+  },
+  "stimmen": {
+    "vorzeile": "Stimmen",
+    "ueberschrift": "Was Kunden sagen",
+    "zitat": "„Tobi weiß, wovon er redet und kommt ohne Druck auf den Punkt. Er hat es geschafft, mir eine Auszeit von meinen alten Versicherungen zu verschaffen und die Kosten sehr transparent erklärt.“",
+    "quelle_titel": "Kundenbewertung",
+    "quelle_zusatz": "ProvenExpert · 4. November 2025",
+    "quelle_initial": "K",
+    "note": "5,00",
+    "note_zusatz": " / 5,00",
+    "note_text": "Gesamtbewertung bei ProvenExpert"
+  },
+  "termin": {
+    "vorzeile": "Termin",
+    "ueberschrift": "30 Minuten, die Dir viel Papier ersparen.",
+    "einleitung": "Termin aussuchen, fertig. Ohne Verpflichtung, ohne Vorbereitung.",
+    "knopf_haupt": "Freien Termin auswählen",
+    "knopf_zweit": "Lieber anrufen",
+    "merkmale": ["30 Minuten", "Kostenlos", "Online oder in Hannover"],
+    "telefon": "+49 176 84330319",
+    "telefon_zusatz": "Mo – Fr, Termine auch abends",
+    "email": "info@trieken.com",
+    "email_zusatz": "Antwort meist am selben Tag",
+    "adresse": "Türkstraße 2",
+    "adresse_zusatz": "30167 Hannover · Nordstadt"
+  },
+  "fuss": {
+    "hinweis": "Versicherungsmakler mit Erlaubnis nach § 34d Abs. 1 GewO. Vermittlerregister D-SSZS-O2N97-97.",
+    "recht": ["Impressum", "Datenschutz", "AGB", "Erstinformation"],
+    "copyright": "© 2026 Tobias Rieken · Finanzberatung Rieken"
+  }
+}
